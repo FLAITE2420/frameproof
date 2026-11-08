@@ -1,0 +1,62 @@
+{
+  "ref": "noisefloor/run-1",
+  "clone": "noisefloor/run-2",
+  "fps": 25,
+  "level": null,
+  "width": 1440,
+  "height": 900,
+  "offset": 0,
+  "threshold": 1,
+  "pixelThreshold": 0.1,
+  "frames": 51,
+  "meanMismatch": 0,
+  "offsetNote": null,
+  "motion": {
+    "reference": {
+      "start": null,
+      "end": null,
+      "peak": 0
+    },
+    "clone": {
+      "start": null,
+      "end": null,
+      "peak": 0
+    },
+    "timing": null,
+    "limit": 1,
+    "pass": true
+  },
+  "pass": true,
+  "worst": [
+    {
+      "refFrame": 0,
+      "cloneFrame": 0,
+      "t": 0,
+      "mismatch": 0
+    },
+    {
+      "refFrame": 1,
+      "cloneFrame": 1,
+      "t": 0.04,
+      "mismatch": 0
+    },
+    {
+      "refFrame": 2,
+      "cloneFrame": 2,
+      "t": 0.08,
+      "mismatch": 0
+    },
+    {
+      "refFrame": 3,
+      "cloneFrame": 3,
+      "t": 0.12,
+      "mismatch": 0
+    },
+    {
+      "refFrame": 4,
+      "cloneFrame": 4,
+      "t": 0.16,
+      "mismatch": 0
+    }
+  ]
+}

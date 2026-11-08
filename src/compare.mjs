@@ -67,7 +67,12 @@ export async function compare(opts) {
   const threshold = num(opts.threshold, level === "motion" ? 1 : 0.02);
   const pixelThreshold = num(opts["pixel-threshold"], 0.1);
   const region = opts.region && opts.region !== true
-    ? (([x, y, width, height]) => ({ x, y, width, height }))(String(opts.region).split(",").map(Number))
+    ? (([x, y, width, height]) => {
+      if (![x, y, width, height].every(Number.isFinite) || width <= 0 || height <= 0) {
+        throw new Error(`bad --region "${opts.region}", expected x,y,w,h with positive w and h`);
+      }
+      return { x, y, width, height };
+    })(String(opts.region).split(",").map(Number))
     : null;
 
   const refPngs = refFiles.map((f) => crop(readPng(f), region));
@@ -86,6 +91,7 @@ export async function compare(opts) {
 
   // Align: which clone frame corresponds to reference frame 0.
   let offset = opts.offset !== undefined && opts.offset !== true ? Number(opts.offset) : null;
+  if (offset !== null && !Number.isFinite(offset)) throw new Error(`--offset must be a frame number, got "${opts.offset}"`);
   if (offset === null) {
     const maxShift = num(opts["max-shift"], 8);
     const probe = Math.min(12, refPngs.length, clonePngs.length);

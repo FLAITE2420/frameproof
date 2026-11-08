@@ -36,6 +36,14 @@ export async function capture(opts) {
   const duration = num(opts.duration, 2000);
   const preRoll = num(opts["pre-roll"], 0);
   const viewport = parseViewport(opts.viewport);
+  const scale = num(opts.scale, 1);
+  // Refuse the values that would make the loop divide by zero, allocate forever or
+  // ask Chromium for something it cannot do. A named error beats a hang.
+  if (!(fps > 0) || fps > 240) throw new Error(`--fps must be between 0 and 240, got ${opts.fps}`);
+  if (!(duration >= 0) || duration > 600000) throw new Error(`--duration must be between 0 and 600000 ms, got ${opts.duration}`);
+  if (!(preRoll >= 0) || preRoll > 600000) throw new Error(`--pre-roll must be between 0 and 600000 ms, got ${opts["pre-roll"]}`);
+  if (!(viewport.width > 0) || !(viewport.height > 0)) throw new Error(`--viewport must be positive, got ${viewport.width}x${viewport.height}`);
+  if (!(scale > 0) || scale > 8) throw new Error(`--scale must be between 0 and 8, got ${opts.scale}`);
   const trackSelectors = String(opts.track ?? opts.selector ?? "")
     .split(",").map((s) => s.trim()).filter(Boolean);
   const trigger = opts.trigger === true ? "load" : (opts.trigger ?? "load");

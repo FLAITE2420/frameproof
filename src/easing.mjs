@@ -21,9 +21,12 @@ export function seriesOf(track, selector, prop, fromMs, toMs) {
     const el = s[selector];
     if (!el || el[prop] === undefined) continue;
     const t = s.t;
+    if (!Number.isFinite(t)) continue;
+    const v = Number(el[prop]);
+    if (!Number.isFinite(v)) continue;
     if (fromMs !== undefined && t < fromMs) continue;
     if (toMs !== undefined && t > toMs) continue;
-    out.push([t, Number(el[prop])]);
+    out.push([t, v]);
   }
   return out;
 }
@@ -43,7 +46,7 @@ export function fit(series, opts = {}) {
     if (first === null && Math.abs(v - v0) > eps) first = t;
     if (Math.abs(v - v1) > eps) last = t;
   }
-  const frameMs = (tEnd - t0Series) / Math.max(1, series.length - 1);
+  const frameMs = Math.max(1e-3, (tEnd - t0Series) / Math.max(1, series.length - 1));
   if (first === null) return { v0, v1, range, change: range, delayMs: null, durationMs: null, visibleMs: 0, overshootPct: 0, fits: [] };
   if (last === null) last = tEnd;
   const visible = Math.max(frameMs, last - first);
@@ -100,7 +103,7 @@ export function fit(series, opts = {}) {
   }
   const fits = [...byName.values()].sort((a, b) => a.rmse - b.rmse).slice(0, 4);
   return {
-    v0, v1, change: range,
+    v0, v1, range, change: range,
     delayMs: Math.round(fits[0]?.startMs ?? first),
     visibleMs: Math.round(visible),
     overshootPct: +(overshoot(series) * 100).toFixed(1),
@@ -120,7 +123,6 @@ export async function easingMain(argv) {
   const track = readJson(opts.track);
   const series = seriesOf(track, selector, prop, opts["from-ms"] !== undefined ? num(opts["from-ms"], 0) : undefined, opts["to-ms"] !== undefined ? num(opts["to-ms"], 0) : undefined);
   if (!series.length) throw new Error(`no samples for selector "${selector}" prop "${prop}" in ${opts.track}`);
-
   const result = fit(series);
   const out = {
     selector, prop, samples: series.length,

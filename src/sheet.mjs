@@ -59,6 +59,7 @@ export async function sheetMain(argv) {
     const meta = (() => { try { return readJson(join(opts.frames, "frames.json")); } catch { return null; } })();
     const fps = num(opts.fps, meta?.fps ?? 25);
     const files = framesIn(opts.frames);
+    if (!files.length) throw new Error(`no frames in ${opts.frames}`);
     const tiles = files
       .map((f, i) => ({ f, i }))
       .filter(({ i }) => i % every === 0)
@@ -75,6 +76,8 @@ export async function sheetMain(argv) {
     const rows = num(opts.rows, 5);
     const ref = framesIn(opts.ref);
     const copy = framesIn(opts.clone);
+    if (!ref.length) throw new Error(`no frames in ${opts.ref}`);
+    if (!copy.length) throw new Error(`no frames in ${opts.clone}`);
     const diff = opts.diff ? framesIn(opts.diff) : [];
     const fps = (() => { try { return readJson(join(opts.ref, "frames.json")).fps; } catch { return num(opts.fps, 25); } })();
     const offset = num(opts.offset, 0);

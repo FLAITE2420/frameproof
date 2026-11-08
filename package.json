@@ -9,8 +9,9 @@
     "frameproof": "./src/cli.mjs"
   },
   "scripts": {
-    "test": "node test/e2e.mjs && node test/edge.mjs",
-    "test:edge": "node test/edge.mjs"
+    "test": "node test/e2e.mjs && node test/edge.mjs && node test/fuzz.mjs",
+    "test:edge": "node test/edge.mjs",
+    "test:fuzz": "node test/fuzz.mjs"
   },
   "engines": {
     "node": ">=20"

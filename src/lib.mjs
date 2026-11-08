@@ -7,10 +7,12 @@ export function parseArgs(argv, defaults = {}) {
   const out = { _: [], ...defaults };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
-    if (!a.startsWith("--")) { out._.push(a); continue; }
+    if (a === "--") { out._.push(...argv.slice(i + 1)); break; }
+    if (!a.startsWith("--") || a === "-") { out._.push(a); continue; }
     const eq = a.indexOf("=");
-    if (eq > 0) { out[a.slice(2, eq)] = a.slice(eq + 1); continue; }
+    if (eq > 2) { out[a.slice(2, eq)] = a.slice(eq + 1); continue; }
     const key = a.slice(2);
+    if (!key) { out._.push(a); continue; }
     const next = argv[i + 1];
     if (next === undefined || next.startsWith("--")) out[key] = true;
     else { out[key] = next; i++; }
@@ -39,13 +41,16 @@ export function parseViewport(v, fallback = { width: 1440, height: 900 }) {
   if (!v || v === true) return fallback;
   const m = String(v).match(/^(\d+)x(\d+)$/);
   if (!m) throw new Error(`bad --viewport "${v}", expected WxH`);
-  return { width: Number(m[1]), height: Number(m[2]) };
+  const width = Number(m[1]), height = Number(m[2]);
+  if (!(width > 0) || !(height > 0)) throw new Error(`bad --viewport "${v}", both sides must be positive`);
+  return { width, height };
 }
 
 export function parseClip(v) {
   if (!v || v === true) return null;
   const p = String(v).split(",").map(Number);
   if (p.length !== 4 || p.some((n) => !Number.isFinite(n))) throw new Error(`bad --clip "${v}", expected x,y,w,h`);
+  if (!(p[2] > 0) || !(p[3] > 0)) throw new Error(`bad --clip "${v}", width and height must be positive`);
   return { x: p[0], y: p[1], width: p[2], height: p[3] };
 }
 

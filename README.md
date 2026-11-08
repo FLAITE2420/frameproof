@@ -77,7 +77,7 @@ node src/cli.mjs sheet compare --ref ref --clone copy-1 --diff compare-1/diff --
 
 ## Measured results in this repo
 
-`npm test` runs 25 checks: 10 end to end, 15 on the edges. Current run on Node 22.23.1, Chromium 1248, 1440x900 @ 25 fps:
+`npm test` runs 25 hand-written checks (10 end to end, 15 on the edges) plus 766 generated fuzz checks. Current run on Node 22.23.1, Chromium 1248, 1440x900 @ 25 fps:
 
 | check | result |
 |---|---|
@@ -113,6 +113,23 @@ The bad copy in `examples/copy-bad.html` is worth a look: its **mean pixel misma
 | selector that does not exist | falls back to the viewport instead of hanging 30 s |
 | 60 fps capture | 31 frames for 500 ms |
 | `--level looks-nice` | rejected by name |
+
+## Fuzz battery
+
+`test/fuzz.mjs` is a fixed seed (`0x5eed`) over 766 generated checks, so any failure is reproducible: 120 argument-parser shapes, 100 numeric/boundary parsers, 100 random bezier curves and fit-recovery cases, 50 degenerate series (empty, flat, duplicate timestamps, `NaN`, `Infinity`, `MAX_VALUE`), 40 CLI invocations with bad input, and 6 real captures at the boundary (1 fps, duration 0, scale 2, 64×64 viewport, pre-roll, dark scheme).
+
+The rule it enforces is narrow on purpose: no raw `TypeError`, `RangeError`, `Cannot read`, `NaN` or hang may ever reach the user. Every refusal has to be a named error.
+
+It found six things the hand-written tests did not:
+
+| found | fix |
+|---|---|
+| `--=` produced an empty option key | `--key=value` only splits when a key exists; a bare `--` or `--=` is positional |
+| `--region 1,2,3` crashed inside `crop()` | region is validated with a named error |
+| `--offset abc` produced `NaN` indices and an empty comparison | offset is validated as a finite frame number |
+| `fit()` returned different object shapes depending on the input | `range` is present on both paths |
+| `parseViewport("0x0")` and `parseClip("10,10,0,0")` were accepted | both refuse non-positive sizes |
+| a selector that does not exist hung 30 s | `capture` reads the box with no wait and falls back to the viewport |
 
 ## Measured on a live site
 
