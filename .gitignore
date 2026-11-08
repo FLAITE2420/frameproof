@@ -2,3 +2,14 @@ node_modules/
 .test-out/
 *.log
 .DS_Store
+
+# demo captures (megabytes of frames; regenerate with the commands in the README)
+demo/ref/
+demo/copy-capture/
+demo/compare/
+demo/compare-pixels/
+demo/sheets/
+demo/live-floor/
+demo/entrance/
+demo/probe-*/
+demo/resend-hero.png

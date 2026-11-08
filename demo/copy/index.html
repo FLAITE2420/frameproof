@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>workshop hero (copy)</title>
+<style>
+  html,body{margin:0;background:#0a0a0a;color:#f0f0f0;font:16px/1.5 ui-sans-serif,system-ui,sans-serif}
+  .hero{
+    position:absolute;left:104px;top:263px;width:544px;height:410px;
+    /* base state = end state, because the reference animation has fill: none */
+    animation: slide-up 1000ms ease-in-out;
+  }
+  .pill{display:inline-block;margin-bottom:32px;padding:6px 12px;border-radius:999px;
+        font-size:14px;color:#c8c8c8;border:1px solid #ffffff1f;background:#ffffff08}
+  h1{margin:0 0 12px;font-size:96px;line-height:1;letter-spacing:-0.01em;font-weight:400;
+     font-family:ui-serif,Georgia,serif}
+  p{margin:0 0 32px;max-width:30rem;font-size:18px;line-height:1.5;color:#a8a8a8}
+  .row{display:flex;gap:16px}
+  .btn{display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:16px;
+       font-size:15px;text-decoration:none}
+  .btn.primary{background:#f0f0f0;color:#0a0a0a}
+  .btn.ghost{border:1px solid #ffffff26;color:#f0f0f0}
+  @keyframes slide-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+</style></head>
+<body>
+  <div class="hero">
+    <span class="pill">Frame by frame, no guessing</span>
+    <h1>Mail that lands<br>in an inbox</h1>
+    <p>Same entrance as the reference: 16px up, 1000ms, ease-in-out. The words are ours.</p>
+    <div class="row">
+      <a class="btn primary" href="#">Get started</a>
+      <a class="btn ghost" href="#">Documentation</a>
+    </div>
+  </div>
+</body></html>

@@ -81,7 +81,17 @@ rmSync(WORK, { recursive: true, force: true });
   check("noise floor is zero", floor.worstMeanMismatch < 1e-6 && (floor.worstTimingDriftS ?? 1) <= 0.04, `mismatch=${(floor.worstMeanMismatch * 100).toFixed(4)}% drift=${floor.worstTimingDriftS}s`);
 }
 
-// 7. sheets render
+// 7. an entrance animation that is over before the tool can look at it
+{
+  run(["capture", "--url", url("entrance.html"), "--out", join(WORK, "entrance"), "--duration", "300", "--fps", "25", "--track", "#box"]);
+  const t = readJson(join(WORK, "entrance", "track.json"));
+  const first = t.samples[0]["#box"];
+  const last = t.samples[t.samples.length - 1]["#box"];
+  const anims = readJson(join(WORK, "entrance", "inspect.json")).animations;
+  check("a fill:none entrance is caught at frame 0", first.ty === 40 && first.opacity === 0 && anims.length === 1, `t0 ty=${first.ty} opacity=${first.opacity} animations=${anims.length}`);
+}
+
+// 8. sheets render
 {
   const out = run(["sheet", "filmstrip", "--frames", join(WORK, "ref", "frames"), "--out", join(WORK, "sheets"), "--every", "4", "--cols", "5", "--width", "200"]);
   const file = out.trim().split("\n")[0];

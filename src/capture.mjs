@@ -58,6 +58,23 @@ export async function capture(opts) {
   page.on("pageerror", (e) => consoleErrors.push(String(e).slice(0, 300)));
   page.on("requestfailed", (r) => consoleErrors.push(`requestfailed ${r.url()} ${r.failure()?.errorText ?? ""}`));
 
+  // Freeze CSS animations at their first frame before a single byte of the page's
+  // own CSS runs. Without this, an entrance animation that finishes while the page
+  // is still loading (fill: none) is dropped from getAnimations() and can never be
+  // stepped back to frame 0.
+  await context.addInitScript(() => {
+    const css = "*,*::before,*::after{animation-play-state:paused !important}";
+    const inject = () => {
+      if (document.getElementById("__fp_pause")) return;
+      const s = document.createElement("style");
+      s.id = "__fp_pause";
+      s.textContent = css;
+      (document.head ?? document.documentElement).appendChild(s);
+    };
+    if (document.documentElement) inject();
+    document.addEventListener("DOMContentLoaded", inject, { once: true });
+  });
+
   // The clock starts frozen: timers, Date and requestAnimationFrame only move
   // when this script advances them, so frame k is always the same instant.
   await page.clock.install({ time: new Date("2026-01-01T00:00:00Z") });

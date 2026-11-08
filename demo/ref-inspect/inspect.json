@@ -1,0 +1,181 @@
+{
+  "title": "reanimate · a skill for Claude Code",
+  "url": "https://reanimate.niazmorshed.dev/",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1
+  },
+  "scrollY": 0,
+  "fonts": [
+    "Inter 100 900 normal",
+    "Inter Fallback normal normal",
+    "Instrument Serif 400 italic",
+    "Instrument Serif Fallback normal normal",
+    "JetBrains Mono 100 800 normal",
+    "JetBrains Mono Fallback normal normal"
+  ],
+  "canvases": [],
+  "libs": [],
+  "animations": [
+    {
+      "kind": "CSSAnimation",
+      "animationName": "mark",
+      "transitionProperty": null,
+      "target": "i",
+      "timing": {
+        "delay": -240,
+        "direction": "normal",
+        "duration": 2400,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "none",
+        "iterationStart": 0,
+        "iterations": null
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(0px)",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.12,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(0px)",
+          "computedOffset": 0.12
+        },
+        {
+          "offset": 0.5,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(20px)",
+          "computedOffset": 0.5
+        },
+        {
+          "offset": 0.62,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(20px)",
+          "computedOffset": 0.62
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(0px)",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "mark",
+      "transitionProperty": null,
+      "target": "i",
+      "timing": {
+        "delay": -120,
+        "direction": "normal",
+        "duration": 2400,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "none",
+        "iterationStart": 0,
+        "iterations": null
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(0px)",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.12,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(0px)",
+          "computedOffset": 0.12
+        },
+        {
+          "offset": 0.5,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(20px)",
+          "computedOffset": 0.5
+        },
+        {
+          "offset": 0.62,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(20px)",
+          "computedOffset": 0.62
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(0px)",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "mark",
+      "transitionProperty": null,
+      "target": "i",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 2400,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "none",
+        "iterationStart": 0,
+        "iterations": null
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(0px)",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.12,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(0px)",
+          "computedOffset": 0.12
+        },
+        {
+          "offset": 0.5,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(20px)",
+          "computedOffset": 0.5
+        },
+        {
+          "offset": 0.62,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(20px)",
+          "computedOffset": 0.62
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "composite": "auto",
+          "transform": "translate(0px)",
+          "computedOffset": 1
+        }
+      ]
+    }
+  ]
+}

@@ -67,16 +67,17 @@ node src/cli.mjs sheet compare --ref ref --clone copy-1 --diff compare-1/diff --
 
 ## How the capture is made deterministic
 
-1. `page.clock.install()` freezes `Date`, timers and requestAnimationFrame before navigation.
-2. After load, `document.getAnimations()` is paused and pinned to `currentTime = 0`.
-3. For frame *k* the clock advances in 1/60 s steps to the frame time, then every animation gets `currentTime = t_k`.
-4. The screenshot is taken with animations still paused, so the pixels cannot drift between the read and the write.
+1. Before the page's own CSS runs, `*,*::before,*::after { animation-play-state: paused }` is injected, so every animation is still at frame 0 when the tool arrives — including entrances with `fill: none` that would otherwise finish during a slow load.
+2. `page.clock.install()` freezes `Date`, timers and requestAnimationFrame before navigation.
+3. After load, `document.getAnimations()` is paused and pinned to `currentTime = 0`.
+4. For frame *k* the clock advances in 1/60 s steps to the frame time, then every animation gets `currentTime = t_k`.
+5. The screenshot is taken with animations still paused, so the pixels cannot drift between the read and the write.
 
 `--trigger hover|scroll` acts on the page before the clock is taken over; those triggers are approximate to within one frame.
 
 ## Measured results in this repo
 
-`npm test` runs 9 checks end to end. Current run on Node 22.23.1, Chromium 1248, 1440x900 @ 25 fps:
+`npm test` runs 10 checks end to end. Current run on Node 22.23.1, Chromium 1248, 1440x900 @ 25 fps:
 
 | check | result |
 |---|---|
@@ -87,9 +88,26 @@ node src/cli.mjs sheet compare --ref ref --clone copy-1 --diff compare-1/diff --
 | easing reader names the card curve | `easeOutExpo cubic-bezier(0.16,1,0.3,1) over ~718 ms`, delay 80 ms, travel −64 px, rmse 0.0006 |
 | good copy passes | 0.00 % mismatch, 0.00 s timing error → **PASS** |
 | noise floor is zero | 0.0000 % mismatch, 0 s drift |
+| a `fill: none` entrance is caught at frame 0 | `ty=40`, `opacity=0`, animation still present |
 | sheets render | filmstrip and compare PNGs |
 
 The bad copy in `examples/copy-bad.html` is worth a look: its **mean pixel mismatch is only 0.10 %** while its timing is off by 160 ms. Pixels alone would have passed it. That is the reason the timing columns exist and the reason `compare` fails a copy whose motion window does not line up.
+
+## Measured on a live site
+
+`https://resend.com/` hero (`div.origin-center-left`), 36 frames at 25 fps, 544x410 px. Nothing was read from their CSS; the numbers below come from the frames and the track.
+
+| | value |
+|---|---|
+| declared by the page | `hero-text-slide-up-fade`, 1000 ms, `ease-in-out`, `translateY(16px)` → 0, opacity 0 → 1, `fill: none` |
+| recovered by `easing` | `ease-in-out cubic-bezier(0.42,0,0.58,1) over ~994 ms`, travel −16 px, delay 0, **rmse 0.0039** |
+| copy measured against it | timing error **0.00 s** on start, end, duration and peak |
+| pixel mismatch of that copy | 10.14 % — different words and a proprietary typeface, so the motion passes and the pixels do not. That is the motion-faithful level, and `compare` prints both numbers. |
+| live noise floor, 2 captures | 3.72 % mean pixel mismatch, **0 s timing drift**, a constant 3 px layout shift |
+
+That last row is the honest part: on a live page the clock is exact, the layout is not. Without the floor you would call a 3 px layout shift a difference in your copy.
+
+The `fill: none` entrance is also the reason step 2 of the capture exists. On a slow load (this page takes ~60 s in software GL) that animation finishes and is dropped from `document.getAnimations()` before any tool can look at it. frameproof injects `animation-play-state: paused` before the page's own CSS runs, so the animation is still there at frame 0.
 
 ## Limits
 
