@@ -1,0 +1,22 @@
+{
+  "name": "frameproof",
+  "version": "0.1.0",
+  "description": "Capture a web animation frame by frame on a virtual clock, fit its easing, and prove a copy moves the same. Measures its own noise floor first.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Matias Rathgeb",
+  "bin": {
+    "frameproof": "./src/cli.mjs"
+  },
+  "scripts": {
+    "test": "node test/e2e.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "pixelmatch": "^7.1.0",
+    "playwright": "1.64.1",
+    "pngjs": "^7.0.0"
+  }
+}

@@ -1,0 +1,108 @@
+# frameproof
+
+Capture a web animation frame by frame on a virtual clock, name its easing, and prove a copy moves the same. Before judging the copy, it measures how much the page moves on its own.
+
+Built for the case where "it looks about right" is not evidence: a clone is accepted only when the numbers from a second capture of your copy match the numbers from the reference.
+
+```
+capture → easing → build → capture → compare → repeat
+                    ↑                              ↓
+                    └──── noisefloor (the floor) ───┘
+```
+
+## Why a noise floor
+
+Two captures of the *same* page are not automatically identical. Timers, requestAnimationFrame and the compositor all start at different instants on a cold versus a warm load, so a comparison can report a difference that belongs to the capture, not to your code.
+
+frameproof removes that by construction: the page runs on a frozen clock that the tool advances one step at a time, and every CSS/WAAPI animation is paused and then stepped to the exact frame time. Frame `k` is always the same instant. The `noisefloor` command proves it on your page before you trust any verdict.
+
+Measured on this repo's example (2 runs, 25 fps, 1440x900): **0.0000 % pixel mismatch, 0 s timing drift, 0 px track delta.**
+
+## Install
+
+```sh
+npm install
+npx playwright install chromium     # ~150 MB, once
+```
+
+Node 20+. No build step, no Bun.
+
+## Use
+
+```sh
+# 1. what does the reference do?
+node src/cli.mjs capture --url https://example.com --out ref \
+  --selector ".hero" --duration 2000 --track ".hero h1,.hero .card"
+
+# 2. every declared animation, its timing, easing and keyframes
+cat ref/inspect.json
+
+# 3. name the curve of one property
+node src/cli.mjs easing --track ref/track.json --selector ".card" --prop ty
+
+# 4. is the copy repeatable, before comparing anything?
+node src/cli.mjs noisefloor --url http://localhost:3000 --out floor --runs 3 \
+  --selector ".hero" --duration 2000 --track ".hero h1,.hero .card"
+
+# 5. capture the copy the same way, compare
+node src/cli.mjs capture --url http://localhost:3000 --out copy-1 \
+  --selector ".hero" --duration 2000 --track ".hero h1,.hero .card"
+node src/cli.mjs compare --ref ref --clone copy-1 --out compare-1
+
+# 6. look at it
+node src/cli.mjs sheet compare --ref ref --clone copy-1 --diff compare-1/diff --out sheets --every 4
+```
+
+`compare` exits 0 on pass and 1 on fail, so it drops straight into CI.
+
+## What each command gives you
+
+| command | output |
+|---|---|
+| `capture` | `frames/NNNN.png`, `inspect.json` (declared animations, timing, keyframes, fonts, libraries), `track.json` (x/y/w/h/opacity/translate/scale/rotate per element per frame), `frames.json`, `capture.json` |
+| `easing` | start/end value, delay, visible duration, overshoot, the four best fitting named cubic-beziers with their RMSE and duration, and `--compare-track` for the difference between two curves |
+| `compare` | mean pixel mismatch, per-frame table, motion window, timing error (start/end/duration/peak minus reference), aligned offset, diff PNGs, `report.json` + `report.md` |
+| `noisefloor` | N captures of one page compared pairwise: pixel floor, timing drift, track delta, `floor.json` |
+| `sheet` | contact sheets laid out by Chromium, so frames carry readable labels |
+
+## How the capture is made deterministic
+
+1. `page.clock.install()` freezes `Date`, timers and requestAnimationFrame before navigation.
+2. After load, `document.getAnimations()` is paused and pinned to `currentTime = 0`.
+3. For frame *k* the clock advances in 1/60 s steps to the frame time, then every animation gets `currentTime = t_k`.
+4. The screenshot is taken with animations still paused, so the pixels cannot drift between the read and the write.
+
+`--trigger hover|scroll` acts on the page before the clock is taken over; those triggers are approximate to within one frame.
+
+## Measured results in this repo
+
+`npm test` runs 9 checks end to end. Current run on Node 22.23.1, Chromium 1248, 1440x900 @ 25 fps:
+
+| check | result |
+|---|---|
+| fit recovers a curve it was given | `easeOutExpo`, rmse 0.0011, 704 ms for a 700 ms input |
+| capture writes frames | 41 frames for `--duration 1600` at 25 fps |
+| capture reads the declared spec | 4 animations, durations 500 / 720 ms, per-keyframe easing recovered |
+| bad copy is rejected | peak timing error 0.16 s → **FAIL** |
+| easing reader names the card curve | `easeOutExpo cubic-bezier(0.16,1,0.3,1) over ~718 ms`, delay 80 ms, travel −64 px, rmse 0.0006 |
+| good copy passes | 0.00 % mismatch, 0.00 s timing error → **PASS** |
+| noise floor is zero | 0.0000 % mismatch, 0 s drift |
+| sheets render | filmstrip and compare PNGs |
+
+The bad copy in `examples/copy-bad.html` is worth a look: its **mean pixel mismatch is only 0.10 %** while its timing is off by 160 ms. Pixels alone would have passed it. That is the reason the timing columns exist and the reason `compare` fails a copy whose motion window does not line up.
+
+## Limits
+
+- DOM, CSS and Web Animations. No WebGL/WebGPU trace and no shader extraction — that needs a different tool.
+- Live URL, local file or localhost. Video and GIF input are not implemented yet.
+- Worker clocks and iframe clocks are not controlled; canvases drawn from a worker will not be frame-exact.
+- Fonts and rasterisation are only comparable on the same machine.
+- A copy that is shifted by more than 2 frames is reported as a warning: auto-alignment hides that shift from the timing columns.
+
+## Credit
+
+The idea of verifying a cloned animation frame by frame comes from [reanimate](https://github.com/NiazMorshed2007/reanimate) by Niaz Morshed (MIT). frameproof is an independent implementation: no code is copied, it runs on Node without Bun, it steps the animations itself instead of recording video, and it adds the noise-floor measurement and the curve fitter.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
