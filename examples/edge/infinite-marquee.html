@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>edge: infinite marquee</title>
+<style>
+  html,body{margin:0;background:#0b0b0c;color:#eaeaea;font:16px ui-sans-serif,system-ui;overflow:hidden}
+  .track{position:absolute;left:0;top:100px;display:flex;gap:24px;animation:scroll 2000ms linear infinite}
+  .chip{width:160px;height:60px;border-radius:10px;background:#1f2937;border:1px solid #374151}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+</style></head><body>
+  <div class="track">
+    <div class="chip"></div><div class="chip"></div><div class="chip"></div>
+    <div class="chip"></div><div class="chip"></div><div class="chip"></div>
+  </div>
+</body></html>

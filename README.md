@@ -61,7 +61,7 @@ node src/cli.mjs sheet compare --ref ref --clone copy-1 --diff compare-1/diff --
 |---|---|
 | `capture` | `frames/NNNN.png`, `inspect.json` (declared animations, timing, keyframes, fonts, libraries), `track.json` (x/y/w/h/opacity/translate/scale/rotate per element per frame), `frames.json`, `capture.json` |
 | `easing` | start/end value, delay, visible duration, overshoot, the four best fitting named cubic-beziers with their RMSE and duration, and `--compare-track` for the difference between two curves |
-| `compare` | mean pixel mismatch, per-frame table, motion window, timing error (start/end/duration/peak minus reference), aligned offset, diff PNGs, `report.json` + `report.md` |
+| `compare` | mean pixel mismatch, per-frame table, motion window, timing error (start/end/duration/peak minus reference), aligned offset, diff PNGs, `report.json` + `report.md`. `--level motion` judges timing alone (different copy, colours and fonts allowed); `--level pixel` also requires the pixels |
 | `noisefloor` | N captures of one page compared pairwise: pixel floor, timing drift, track delta, `floor.json` |
 | `sheet` | contact sheets laid out by Chromium, so frames carry readable labels |
 
@@ -77,7 +77,7 @@ node src/cli.mjs sheet compare --ref ref --clone copy-1 --diff compare-1/diff --
 
 ## Measured results in this repo
 
-`npm test` runs 10 checks end to end. Current run on Node 22.23.1, Chromium 1248, 1440x900 @ 25 fps:
+`npm test` runs 25 checks: 10 end to end, 15 on the edges. Current run on Node 22.23.1, Chromium 1248, 1440x900 @ 25 fps:
 
 | check | result |
 |---|---|
@@ -92,6 +92,27 @@ node src/cli.mjs sheet compare --ref ref --clone copy-1 --diff compare-1/diff --
 | sheets render | filmstrip and compare PNGs |
 
 The bad copy in `examples/copy-bad.html` is worth a look: its **mean pixel mismatch is only 0.10 %** while its timing is off by 160 ms. Pixels alone would have passed it. That is the reason the timing columns exist and the reason `compare` fails a copy whose motion window does not line up.
+
+## Edge cases, measured
+
+`test/edge.mjs` exists because every one of these broke a naive recorder at some point. Numbers below are from the current run.
+
+| case | what it proves |
+|---|---|
+| animation with `animation-delay: -200ms` | the capture starts mid-flight: `ty(0) = -12.61px` of a −40→0 move |
+| infinite marquee | 218.4 px travelled, and two captures of the same page differ by `0.0000%` |
+| `:hover` transition | recorded: scale 1.000→1.040, ty 0.0→−8.0 |
+| `transform-origin: bottom right` scale | the box moves, not only grows: corner travels 187.4 px while scale goes 0.40→1.00 |
+| `clip-path` wipe | the track cannot see it (x/w constant) yet the pixel activity curve finds the window 3–13 |
+| two animations on one element | `slide 302 ms` and `fade 1210 ms` recovered separately (declared 300 / 1200) |
+| page with no animation | `compare` passes, `easing` answers `no fit` instead of crashing |
+| library detection | `three r178, gsap 3.12.5, anime.js` |
+| 8000 ms animation captured as a 2 s slice | 21 samples at 10 fps, tx 0→300 px |
+| same motion, different skin | `--level motion` passes (timing 0.00 s), `--level pixel` rejects it (99.55 %) |
+| frames of different sizes | refused with `frame size differs: reference 1440x900, clone 800x600` |
+| selector that does not exist | falls back to the viewport instead of hanging 30 s |
+| 60 fps capture | 31 frames for 500 ms |
+| `--level looks-nice` | rejected by name |
 
 ## Measured on a live site
 

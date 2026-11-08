@@ -97,8 +97,14 @@ export async function capture(opts) {
       if (el) el.scrollIntoView({ block: "center", inline: "center", behavior: "instant" });
     }, sel);
     if (!clip) {
-      const box = await page.locator(sel).first().boundingBox();
-      if (box) clip = { x: Math.round(box.x), y: Math.round(box.y), width: Math.round(box.width), height: Math.round(box.height) };
+      // never wait on the element: a selector that does not exist falls back to the viewport
+      const box = await page.evaluate((s) => {
+        const el = document.querySelector(s);
+        if (!el) return null;
+        const r = el.getBoundingClientRect();
+        return { x: r.x, y: r.y, width: r.width, height: r.height };
+      }, sel);
+      if (box && box.width > 0 && box.height > 0) clip = box;
     }
   }
   if (clip) clip = { x: Math.round(clip.x), y: Math.round(clip.y), width: Math.round(clip.width), height: Math.round(clip.height) };

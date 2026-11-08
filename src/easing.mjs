@@ -44,7 +44,7 @@ export function fit(series, opts = {}) {
     if (Math.abs(v - v1) > eps) last = t;
   }
   const frameMs = (tEnd - t0Series) / Math.max(1, series.length - 1);
-  if (first === null) return { v0, v1, range, delayMs: null, durationMs: null, visibleMs: 0, overshootPct: 0, fits: [] };
+  if (first === null) return { v0, v1, range, change: range, delayMs: null, durationMs: null, visibleMs: 0, overshootPct: 0, fits: [] };
   if (last === null) last = tEnd;
   const visible = Math.max(frameMs, last - first);
 

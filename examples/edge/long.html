@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>edge: long animation</title>
+<style>
+  html,body{margin:0;background:#0b0b0c;color:#fff;font:16px ui-sans-serif,system-ui}
+  .bar{position:absolute;left:0;top:200px;width:100px;height:40px;background:#22c55e;
+       animation:grow 8000ms linear both}
+  @keyframes grow{from{transform:translateX(0);opacity:.2}to{transform:translateX(1200px);opacity:1}}
+</style></head><body><div class="bar" id="bar"></div></body></html>

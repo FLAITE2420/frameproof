@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>edge: two animations, one element</title>
+<style>
+  html,body{margin:0;background:#0b0b0c;color:#fff;font:16px ui-sans-serif,system-ui}
+  .card{position:absolute;left:60px;top:80px;width:280px;height:160px;border-radius:12px;background:#1e293b;
+        animation:slide 300ms ease-out both, fade 1200ms linear both}
+  @keyframes slide{from{transform:translateX(-120px)}to{transform:translateX(0)}}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+</style></head><body><div class="card" id="card"></div></body></html>

@@ -13,6 +13,10 @@ frameproof compare — does the copy move the same?
 
   --threshold T          pass if mean mismatch ≤ T (fraction of pixels), default 0.02
   --pixel-threshold T    pixelmatch colour sensitivity 0..1, default 0.1
+  --level L              motion | pixel. "motion" judges timing and easing only and
+                         ignores pixels (different copy, colours, fonts allowed);
+                         "pixel" also requires the pixels to match. Explicit
+                         --threshold / --motion-threshold win over the level.
   --max-shift N          auto-align search range in frames, default 8
   --offset K             fixed offset instead of auto-align
   --region x,y,w,h       compare only this region
@@ -58,7 +62,9 @@ export async function compare(opts) {
   if (!refFiles.length || !cloneFiles.length) throw new Error(`no frames in ${refFiles.length ? cloneDir : refDir}`);
 
   const fps = num(opts.fps, readJsonSafe(join(opts.ref, "frames.json"))?.fps ?? 25);
-  const threshold = num(opts.threshold, 0.02);
+  const level = opts.level && opts.level !== true ? String(opts.level) : null;
+  if (level && level !== "motion" && level !== "pixel") throw new Error(`--level must be motion or pixel, got "${level}"`);
+  const threshold = num(opts.threshold, level === "motion" ? 1 : 0.02);
   const pixelThreshold = num(opts["pixel-threshold"], 0.1);
   const region = opts.region && opts.region !== true
     ? (([x, y, width, height]) => ({ x, y, width, height }))(String(opts.region).split(",").map(Number))
@@ -83,7 +89,10 @@ export async function compare(opts) {
   if (offset === null) {
     const maxShift = num(opts["max-shift"], 8);
     const probe = Math.min(12, refPngs.length, clonePngs.length);
-    let best = { shift: 0, score: Infinity };
+    // score every shift, then prefer the smallest absolute shift on a tie:
+    // on a page where nothing moves, every shift scores zero and the first one
+    // tested would otherwise win and eat the first frames of the comparison.
+    let best = null;
     for (let shift = -maxShift; shift <= maxShift; shift++) {
       let score = 0, n = 0;
       for (let i = 0; i < probe; i++) {
@@ -96,9 +105,11 @@ export async function compare(opts) {
       }
       if (!n) continue;
       score /= n;
-      if (score < best.score) best = { shift, score };
+      if (!best || score < best.score - 1e-9 || (Math.abs(score - best.score) <= 1e-9 && Math.abs(shift) < Math.abs(best.shift))) {
+        best = { shift, score };
+      }
     }
-    offset = best.shift;
+    offset = best ? best.shift : 0;
   }
 
   const pairs = [];
@@ -112,7 +123,8 @@ export async function compare(opts) {
     else if (!opts["no-diffs"]) writePng(join(out, "diff", `${pad(i)}.png`), diff);
   }
 
-  const mean = pairs.reduce((s, p) => s + p.mismatch, 0) / pairs.length;
+  const mean = pairs.length ? pairs.reduce((s, p) => s + p.mismatch, 0) / pairs.length : NaN;
+  if (!pairs.length) throw new Error(`no frame pairs: reference ${refPngs.length} frames, copy ${clonePngs.length}, offset ${offset}. Capture both with the same --duration and --fps.`);
   const worst = [...pairs].sort((a, b) => b.mismatch - a.mismatch).slice(0, 5);
 
   const window = (acts) => {
@@ -130,14 +142,15 @@ export async function compare(opts) {
     peak: (wClone.peak - wRef.peak) / fps,
   };
   const motionLimit = num(opts["motion-threshold"], 0.08);
-  const timingOk = timing ? Math.max(Math.abs(timing.start), Math.abs(timing.end), Math.abs(timing.duration), Math.abs(timing.peak)) <= motionLimit : false;
+  const staticBoth = wRef.start === null && wClone.start === null;
+  const timingOk = timing ? Math.max(Math.abs(timing.start), Math.abs(timing.end), Math.abs(timing.duration), Math.abs(timing.peak)) <= motionLimit : staticBoth;
   const pass = mean <= threshold && timingOk;
   const offsetNote = Math.abs(offset) > 2
     ? `the copy is ${offset} frames (${(Math.abs(offset) / fps * 1000).toFixed(0)} ms) ${offset > 0 ? "late" : "early"}; auto-alignment hides that from the timing columns`
     : null;
 
   const report = {
-    ref: opts.ref, clone: opts.clone, fps, width, height, offset, threshold, pixelThreshold,
+    ref: opts.ref, clone: opts.clone, fps, level, width, height, offset, threshold, pixelThreshold,
     frames: pairs.length, meanMismatch: mean,
     offsetNote,
     motion: { reference: wRef, clone: wClone, timing, limit: motionLimit, pass: timingOk },
@@ -158,7 +171,7 @@ export async function compare(opts) {
 - ${pairs.length} frames at ${fps} fps, ${width}x${height} px, clone offset ${offset}
 - mean pixel mismatch: **${(mean * 100).toFixed(2)}%** (limit ${(threshold * 100).toFixed(1)}%)
 - motion window — reference ${wRef.start}–${wRef.end} (peak ${wRef.peak}) · copy ${wClone.start}–${wClone.end} (peak ${wClone.peak})
-- timing error (copy − reference): ${timing ? `start ${timing.start.toFixed(2)}s, end ${timing.end.toFixed(2)}s, duration ${timing.duration.toFixed(2)}s, peak ${timing.peak.toFixed(2)}s` : "not measurable"} (limit ${motionLimit}s)
+- timing error (copy − reference): ${timing ? `start ${timing.start.toFixed(2)}s, end ${timing.end.toFixed(2)}s, duration ${timing.duration.toFixed(2)}s, peak ${timing.peak.toFixed(2)}s` : staticBoth ? "not applicable — neither set moves" : "not measurable"} (limit ${motionLimit}s)
 - verdict: **${pass ? "PASS" : "FAIL"}**
 ${offsetNote ? `- warning: ${offsetNote}\n` : ""}- worst frames: ${worst.map((w) => `#${w.refFrame} ${(w.mismatch * 100).toFixed(2)}% @ ${w.t.toFixed(2)}s`).join(", ")}
 
