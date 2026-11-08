@@ -16,3 +16,6 @@ demo/resend-hero.png
 demo/ref-inspect/
 .edge-out/
 .fuzz-out/
+
+# default output of a bare `noisefloor --url` run
+noisefloor/
