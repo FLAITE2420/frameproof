@@ -270,7 +270,9 @@ export async function capture(opts) {
     const t = startT + (i * 1000) / fps;
     const target = Math.max(0, t);
     while (simMs < target - 1e-9) {
-      const step = Math.min(stepMs, target - simMs);
+      // long single jumps (1 fps means 1000ms per frame) are where the virtual
+      // clock gets flaky under load; advance in <=250ms slices instead
+      const step = Math.min(stepMs, target - simMs, 250);
       await page.clock.runFor(step);
       simMs += step;
     }
@@ -286,7 +288,8 @@ export async function capture(opts) {
       }, t);
     }
     const file = join(framesDir, `${pad(i)}.png`);
-    await page.screenshot({ path: file, clip: clip ?? undefined, animations: "allow", caret: "hide" });
+    const shot = () => page.screenshot({ path: file, clip: clip ?? undefined, animations: "allow", caret: "hide", timeout: 60000 });
+    try { await shot(); } catch { await page.waitForTimeout(250); await shot(); }
     frames.push({ i, t });
     if (trackSelectors.length) track.push({ t, ...(await sample(t)) });
     if (opts.gl) {
