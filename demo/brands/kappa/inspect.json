@@ -1,0 +1,473 @@
+{
+  "title": "Kappa: Casual and sports clothing, shoes, accessories",
+  "url": "https://www.kappa.com/",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1
+  },
+  "scrollY": 0,
+  "fonts": [
+    "JudgemeStar normal normal",
+    "lffonticon 400 normal",
+    "Noto Serif Gurmukhi 400 normal",
+    "Open-Dyslexic 400 normal",
+    "Sea-Accessibility-Open-Dyslexic 400 normal",
+    "Sea-Accessibility 400 normal",
+    "Sea-Accessibility 700 normal"
+  ],
+  "canvases": [],
+  "libs": [],
+  "animations": [
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.third-level-image-img.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.third-level-image-img.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.third-level-image-img.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.third-level-image-img.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.third-level-image-img.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.third-level-image-img.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.third-level-image-img.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.third-level-image-img.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.third-level-image-img.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.third-level-image-img.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.third-level-image-img.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.third-level-image-img.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "fade-in",
+      "transitionProperty": null,
+      "target": "img.small--hide.image-element",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.29, 0.65, 0.58, 1)",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "zoom-fade",
+      "transitionProperty": null,
+      "target": "div.background-media-text__video",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 2500,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "cubic-bezier(0.26, 0.54, 0.32, 1)",
+          "composite": "auto",
+          "transform": "scale(1.3)",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "cubic-bezier(0.26, 0.54, 0.32, 1)",
+          "composite": "auto",
+          "transform": "scale(1)",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    }
+  ]
+}

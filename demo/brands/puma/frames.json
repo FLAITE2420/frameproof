@@ -1,0 +1,13 @@
+{
+  "fps": 10,
+  "count": 7,
+  "trigger": "load",
+  "clock": "virtual",
+  "preRoll": 0,
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "scale": 1,
+  "clip": null
+}

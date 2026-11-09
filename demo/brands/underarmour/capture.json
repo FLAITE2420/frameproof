@@ -1,0 +1,40 @@
+{
+  "url": "https://www.underarmour.com/en-us/",
+  "out": "demo/brands/underarmour",
+  "trigger": "load",
+  "fps": 10,
+  "duration": 600,
+  "preRoll": 0,
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "selector": null,
+  "clip": null,
+  "frames": 7,
+  "wallMs": 2039,
+  "consoleErrors": [
+    "requestfailed https://www.underarmour.com/_fs-ch-1T1wmsGaOgGaSxcX/pat?token=ASu3b50NCD3KF4nffa6TH8bvQFBg8U0rjKpQQyk2dj2gXKhqH3KJmBP8BbdAqbbPjYhxS123zUKwSuDAJ3PtAFHVf0q0CwjJTmOb4wiPzPcqxiOVteIzH2Fve_qkNQMJzlH30tcRU2WOAXA16VCcIhiDC1xACO5F-eDWH8DfVcf3__Dg8ERfliAS8pzJccaosTfE7BEukSBxU11FKKgmS4E5733yssp1LR99jhfWlev5iLJNzZttwPoundIttWPrLeX4VpMn4qni2XQFmlCN-HKYkIRWYwzFP4Mzf8Sdidwnfzh8x4kk16PIzSKEWBeDqCvnaG8K2g== net::ERR_ABORTED",
+    "requestfailed https://edge.curalate.com/v1/media/IUyyMwiQFXVNlXEI?locale=en-us&limit=10 net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://edge.curalate.com/sites/underarmour-mjqrqa/site/latest/site.min.js net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://www.googletagmanager.com/gtag/js?id=G-3S96BP4YG0 net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://www.underarmour.com/_fs-ch-1T1wmsGaOgGaSxcX/log-error net::ERR_ABORTED",
+    "requestfailed https://analytics.underarmour.com/ee/irl1/v1/interact?configId=4a7696f4-5e94-4c46-85fb-e0611f7d90a2&requestId=f25d70dd-ee6c-4fb5-a5e6-c061fef33e64 net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://tags.tiqcdn.com/utag/underarmour/seabiscuit-na/prod/utag.sync.js net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://tags.tiqcdn.com/utag/underarmour/seabiscuit-na/prod/utag.js net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://analytics.underarmour.com/ee/irl1/v1/interact?configId=4a7696f4-5e94-4c46-85fb-e0611f7d90a2&requestId=edb3437c-5e92-4f25-9913-8962dcc80a33 net::ERR_NAME_NOT_RESOLVED",
+    "TypeError: [alloy] [DataCollector] An error occurred while executing the sendEvent command.\nCaused by: Network request failed.\nCaused by: Failed to fetch",
+    "requestfailed https://analytics.underarmour.com/ee/irl1/v1/interact?configId=4a7696f4-5e94-4c46-85fb-e0611f7d90a2&requestId=68f7a103-cf69-41f7-8d46-7ca260ee41e5 net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://518000498.collect.igodigital.com/collect.js net::ERR_NAME_NOT_RESOLVED",
+    "TypeError: [alloy] [DataCollector] An error occurred while executing the sendEvent command.\nCaused by: Network request failed.\nCaused by: Failed to fetch",
+    "requestfailed https://underarmour.us-1.evergage.com/api2/event/ua_prod_sku?event=eyJzb3VyY2UiOnsicGFnZVR5cGUiOiJkZWZhdWx0IiwibG9jYWxlIjoiZW5fVVMiLCJ1cmwiOiJodHRwczovL3d3dy51bmRlcmFybW91ci5jb20vZW4tdXMvIiwidXJsUmVmZXJyZXIiOiIiLCJjaGFubmVsIjoiV2ViIiwiYmVhY29uVmVyc2lvbiI6MTYsImNvbmZpZ1ZlcnNpb24iOiIxMjUiLCJjb250ZW50Wm9uZXMiOltdfSwidXNlciI6eyJhbm9ueW1vdXNJZCI6IjZjN2E3ZDliZGFhNTQ0ZGUiLCJhdHRyaWJ1dGVzIjp7ImRvbWFpbiI6Ind3dy51bmRlcmFybW91ci5jb20iLCJsb2NhbGUiOiJlbl9VUyJ9LCJpZGVudGl0aWVzIjp7fX0sImludGVyYWN0aW9uIjp7Im5hbWUiOiJEZWZhdWx0IFBhZ2UifSwicGFnZVZpZXciOnRydWUsImNvbnNlbnRzIjpbXSwiYWNjb3VudCI6e30sIl90b29sc0V2ZW50TGlua0lkIjoiNTc1NDk0NTg4NTIzMTExMyIsImV4cGxhaW4iOnRydWV9 net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://www.dwin1.com/15431.js net::ERR_NAME_NOT_RESOLVED"
+  ],
+  "capturedAt": "2026-11-09T04:27:08.414Z",
+  "gl": {
+    "programs": 0,
+    "shaders": 0,
+    "animatedChannels": 0,
+    "drawsPerFrame": 0
+  }
+}

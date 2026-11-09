@@ -1,0 +1,28 @@
+{
+  "url": "https://www.otto.de/",
+  "out": "demo/brands/otto",
+  "trigger": "load",
+  "fps": 10,
+  "duration": 600,
+  "preRoll": 0,
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "selector": null,
+  "clip": null,
+  "frames": 7,
+  "wallMs": 1647,
+  "consoleErrors": [
+    "requestfailed https://www.otto.de/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/mfc net::ERR_ABORTED",
+    "TypeError: i is not a function",
+    "TypeError: Cannot read properties of undefined (reading 'domComplete')"
+  ],
+  "capturedAt": "2026-11-09T04:27:28.820Z",
+  "gl": {
+    "programs": 0,
+    "shaders": 0,
+    "animatedChannels": 0,
+    "drawsPerFrame": 0
+  }
+}

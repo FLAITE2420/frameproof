@@ -1,0 +1,26 @@
+{
+  "title": "OTTO - Mode, Möbel & Technik » Zum Online-Shop",
+  "url": "https://www.otto.de/",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1
+  },
+  "scrollY": 0,
+  "fonts": [
+    "OttoSans 400 normal",
+    "OttoSans 700 normal",
+    "OttoSans 800 normal",
+    "OttoSans 500 normal",
+    "OttoSansMedium 500 normal",
+    "OttoPlay 400 normal",
+    "OttoSansThin 400 normal",
+    "OttoIconFonts 400 normal",
+    "OttoIcons 400 normal",
+    "Inter-ExtraBold normal normal",
+    "Inter-Regular normal normal"
+  ],
+  "canvases": [],
+  "libs": [],
+  "animations": []
+}

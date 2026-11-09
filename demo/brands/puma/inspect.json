@@ -1,0 +1,25 @@
+{
+  "title": "PUMA Netherlands | Sports Apparel and Shoes | Puma Nederland",
+  "url": "https://eu.puma.com/nl/en",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1
+  },
+  "scrollY": 0,
+  "fonts": [
+    "FFDINforPuma 400 normal",
+    "FFDINforPuma 700 normal",
+    "Figtree 400 normal",
+    "Figtree 400 italic",
+    "Figtree 500 normal",
+    "Figtree 500 italic",
+    "Figtree 600 normal",
+    "Figtree 600 italic",
+    "Figtree 700 normal",
+    "Figtree 700 italic"
+  ],
+  "canvases": [],
+  "libs": [],
+  "animations": []
+}

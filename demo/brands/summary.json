@@ -1,0 +1,160 @@
+[
+ {
+  "brand": "nike",
+  "url": "https://www.nike.com/",
+  "seconds": 10,
+  "error": null,
+  "title": "Nike. Just Do It. Nike NL",
+  "animations": 37,
+  "kinds": [
+   "CSSAnimation"
+  ],
+  "names": [
+   "_3FGhfyw3"
+  ],
+  "libs": [],
+  "canvases": [],
+  "fonts": 15,
+  "consoleErrors": 7,
+  "gl": {
+   "programs": 0,
+   "shaders": 0,
+   "animated": 0
+  }
+ },
+ {
+  "brand": "puma",
+  "url": "https://eu.puma.com/nl/en/home",
+  "seconds": 8,
+  "error": null,
+  "title": "PUMA Netherlands | Sports Apparel and Shoes | Puma Nederland",
+  "animations": 0,
+  "kinds": [],
+  "names": [],
+  "libs": [],
+  "canvases": [],
+  "fonts": 10,
+  "consoleErrors": 20,
+  "gl": {
+   "programs": 0,
+   "shaders": 0,
+   "animated": 0
+  }
+ },
+ {
+  "brand": "adidas",
+  "url": "https://www.adidas.com/",
+  "seconds": 2,
+  "error": null,
+  "title": "adidas",
+  "animations": 0,
+  "kinds": [],
+  "names": [],
+  "libs": [],
+  "canvases": [],
+  "fonts": 4,
+  "consoleErrors": 1,
+  "gl": {
+   "programs": 0,
+   "shaders": 0,
+   "animated": 0
+  }
+ },
+ {
+  "brand": "reebok",
+  "url": "https://www.reebok.com/",
+  "seconds": 12,
+  "error": "    at async ClockController.runFor (<anonymous>:110:5) |     at async <anonymous>:396:30 | ",
+  "title": null,
+  "animations": null,
+  "kinds": null,
+  "names": null,
+  "libs": null,
+  "canvases": null,
+  "fonts": null,
+  "consoleErrors": null,
+  "gl": null
+ },
+ {
+  "brand": "underarmour",
+  "url": "https://www.underarmour.com/en-us/",
+  "seconds": 11,
+  "error": null,
+  "title": "Under Armour® Official Store | FREE Shipping Available",
+  "animations": 6,
+  "kinds": [
+   "CSSAnimation"
+  ],
+  "names": [
+   "HeroCallout-module-scss-module__U0hkWW__heroContentFadeInUp",
+   "uawc-loading-animation"
+  ],
+  "libs": [],
+  "canvases": [],
+  "fonts": 9,
+  "consoleErrors": 15,
+  "gl": {
+   "programs": 0,
+   "shaders": 0,
+   "animated": 0
+  }
+ },
+ {
+  "brand": "diadora",
+  "url": "https://www.diadora.com/",
+  "seconds": 5,
+  "error": "    at async ClockController.runFor (<anonymous>:110:5) |     at async <anonymous>:396:30 | ",
+  "title": null,
+  "animations": null,
+  "kinds": null,
+  "names": null,
+  "libs": null,
+  "canvases": null,
+  "fonts": null,
+  "consoleErrors": null,
+  "gl": null
+ },
+ {
+  "brand": "otto",
+  "url": "https://www.otto.de/",
+  "seconds": 15,
+  "error": null,
+  "title": "OTTO - Mode, Möbel & Technik » Zum Online-Shop",
+  "animations": 0,
+  "kinds": [],
+  "names": [],
+  "libs": [],
+  "canvases": [],
+  "fonts": 11,
+  "consoleErrors": 3,
+  "gl": {
+   "programs": 0,
+   "shaders": 0,
+   "animated": 0
+  }
+ },
+ {
+  "brand": "kappa",
+  "url": "https://www.kappa.com/",
+  "seconds": 6,
+  "error": null,
+  "title": "Kappa: Casual and sports clothing, shoes, accessories",
+  "animations": 14,
+  "kinds": [
+   "CSSAnimation"
+  ],
+  "names": [
+   "fade-in",
+   "zoom-fade"
+  ],
+  "libs": [],
+  "canvases": [],
+  "fonts": 7,
+  "consoleErrors": 15,
+  "gl": {
+   "programs": 0,
+   "shaders": 0,
+   "animated": 0
+  }
+ }
+]

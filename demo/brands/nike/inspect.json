@@ -1,0 +1,1844 @@
+{
+  "title": "Nike. Just Do It. Nike NL",
+  "url": "https://www.nike.com/nl/",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1
+  },
+  "scrollY": 0,
+  "fonts": [
+    "nike-glyphs normal normal",
+    "Nike TG 400 normal",
+    "Nike Futura ND 400 normal",
+    "Nike Futura 400 normal",
+    "Helvetica Now Text 400 normal",
+    "Helvetica Now Text Medium 400 normal",
+    "Helvetica Now Display Medium 400 normal",
+    "Palatino LT Pro Light 400 normal",
+    "VideoJS normal normal",
+    "Helvetica Now Text normal normal",
+    "Helvetica Now Text Medium normal normal",
+    "Helvetica Now Display Bold normal normal",
+    "Helvetica Now Display XBold normal normal",
+    "Nike Futura ND normal normal",
+    "Palatino LT Pro Light normal normal"
+  ],
+  "canvases": [],
+  "libs": [],
+  "animations": [
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "h4.merch-menu-heading",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "h4.merch-menu-heading",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "h4.merch-menu-heading",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "h4.merch-menu-heading",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "_3FGhfyw3",
+      "transitionProperty": null,
+      "target": "a",
+      "timing": {
+        "delay": 0,
+        "direction": "normal",
+        "duration": 650,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "clip",
+          "textWrapMode": "wrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.99,
+          "easing": "ease",
+          "composite": "auto",
+          "textWrapMode": "wrap",
+          "textOverflow": "clip",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 0.99
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "textOverflow": "ellipsis",
+          "textWrapMode": "nowrap",
+          "overflowX": "hidden",
+          "overflowY": "hidden",
+          "whiteSpaceCollapse": "collapse",
+          "computedOffset": 1
+        }
+      ]
+    }
+  ]
+}

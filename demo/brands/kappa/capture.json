@@ -1,0 +1,40 @@
+{
+  "url": "https://www.kappa.com/",
+  "out": "demo/brands/kappa",
+  "trigger": "load",
+  "fps": 10,
+  "duration": 600,
+  "preRoll": 0,
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "selector": null,
+  "clip": null,
+  "frames": 7,
+  "wallMs": 1174,
+  "consoleErrors": [
+    "requestfailed https://static.klaviyo.com/onsite/js/YpCNxX/klaviyo.js?company_id=YpCNxX net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://www.googletagmanager.com/gtm.js?id=GTM-5BF36652 net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://www.clarity.ms/tag/rxdx06nq8o?ref=shopify net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://cdn.shopify.com/videos/c/o/v/6d196e8a8d794595ba11a9c09d7b0974.mp4 net::ERR_ABORTED",
+    "requestfailed https://cdn-accessibility.avada.io/scripttag/loader-sri-manifest.json?v=1767225600000 net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://bzrcdn.openai.com/sdk/oaiq.min.js net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://cdn-accessibility.avada.io/scripttag/sea-accessibility-loader.min.js?v=1767225600000 net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://www.clarity.ms/tag/shopify/rxdx06nq8o net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://monorail-edge.shopifysvc.com/v1/produce net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://shop.app/pay/hop?analytics_trace_id=59b2ee2e-a4e5-401c-b2a1-6fb63300fd15&target_origin=https%3A%2F%2Fwww.kappa.com&client_handle=kappa-ita.myshopify.com net::ERR_BLOCKED_BY_RESPONSE",
+    "requestfailed https://www.kappa.com/shopify_pay/accelerated_checkout net::ERR_ABORTED",
+    "requestfailed https://www.automizely-analytics.com/analytics/collect?v=2&gtm=amwcp1&sr=1440x900&ul=en-US&cid=87f32d32-0822-4e37-a33f-e5562cd9dd4e&dl=https%3A%2F%2Fwww.kappa.com%2F&dr=&dt=Kappa%3A%20Casual%20and%20sports%20clothing%2C%20shoes%2C%20accessories&sid=0d82c5ea-7cac-4cf0-b760-d99336fc179d&_psc=as net::ERR_NAME_NOT_RESOLVED",
+    "TypeError: Failed to fetch",
+    "requestfailed https://trkapi.impact.com/PageLoad net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://cdn.shopify.com/videos/c/o/v/6d196e8a8d794595ba11a9c09d7b0974.mp4 net::ERR_ABORTED"
+  ],
+  "capturedAt": "2026-11-09T04:27:34.648Z",
+  "gl": {
+    "programs": 0,
+    "shaders": 0,
+    "animatedChannels": 0,
+    "drawsPerFrame": 0
+  }
+}

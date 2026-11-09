@@ -132,11 +132,27 @@ export async function capture(opts) {
   if (clip) clip = { x: Math.round(clip.x), y: Math.round(clip.y), width: Math.round(clip.width), height: Math.round(clip.height) };
 
   if (trigger === "hover") {
+    // page.hover() waits on actionability, and that wait runs on the fake clock:
+    // frozen time means a 30s timeout. Move the mouse to the element's box instead.
     const t = String(opts.target ?? opts.selector ?? "body");
-    await page.hover(t);
+    const box = await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (!el) return null;
+      const r = el.getBoundingClientRect();
+      return { x: r.x + r.width / 2, y: r.y + r.height / 2 };
+    }, t);
+    if (!box) throw new Error(`--trigger hover: no element matches "${t}"`);
+    // page.mouse.move() goes through the input pipeline that needs frames; with the
+    // clock frozen nothing is dispatched. CDP's Input domain does not wait.
+    const session = await page.context().newCDPSession(page);
+    await session.send("Input.dispatchMouseEvent", { type: "mouseMoved", x: box.x, y: box.y, button: "none", buttons: 0 });
+    await page.clock.runFor(100);
   } else if (trigger === "scroll") {
     const y = num(opts["scroll-to"], 0);
     await page.evaluate((v) => window.scrollTo({ top: v, behavior: "instant" }), y);
+    // observers, sticky recalculation and scroll-linked handlers need a frame or
+    // two of virtual time before they have done anything at all
+    await page.clock.runFor(100);
   }
 
   // Take over the animation clock before the first frame.
@@ -224,10 +240,16 @@ export async function capture(opts) {
       const ty = (m ? m.m42 : 0) + (tr && tr.length > 1 ? tr[1] : 0);
       const scale = m ? Math.hypot(m.m11, m.m12) * (sc ? sc[0] : 1) : (sc ? sc[0] : 1);
       const rotate = m ? Math.atan2(m.m12, m.m11) * 180 / Math.PI + (ro ? ro[0] : 0) : (ro ? ro[0] : 0);
+      // rotateY puts its sine in m13/m31, where a 2D atan2(m12, m11) reads zero.
+      const rotateY = m ? Math.atan2(-m.m13, m.m11) * 180 / Math.PI : 0;
+      // A parent perspective projects the box without touching this element's
+      // matrix, so the drawn width is the only place that scale shows up.
+      const off = el.offsetWidth || r.width || 1;
+      const boxScale = r.width / off;
       return {
         x: r.x, y: r.y, w: r.width, h: r.height,
         opacity: Number(cs.opacity),
-        tx, ty, scale, rotate,
+        tx, ty, scale, rotate, rotateY, boxScale,
       };
     };
     const out = {};

@@ -1,0 +1,19 @@
+{
+  "title": "adidas",
+  "url": "https://www.adidas.com/",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1
+  },
+  "scrollY": 0,
+  "fonts": [
+    "adineue bold normal",
+    "adineue normal normal",
+    "adineue 800 normal",
+    "icomoon normal normal"
+  ],
+  "canvases": [],
+  "libs": [],
+  "animations": []
+}

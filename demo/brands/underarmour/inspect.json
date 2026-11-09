@@ -1,0 +1,265 @@
+{
+  "title": "Under Armour® Official Store | FREE Shipping Available",
+  "url": "https://www.underarmour.com/en-us/",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1
+  },
+  "scrollY": 0,
+  "fonts": [
+    "NeuePlakUA 400 normal",
+    "NeuePlakUA 600 normal",
+    "NeuePlakUA 700 normal",
+    "NeuePlakUA 800 900 normal",
+    "NeuePlakUA Fallback normal normal",
+    "NeuePlakUAText 400 normal",
+    "NeuePlakUAText 600 normal",
+    "NeuePlakUAText 700 normal",
+    "NeuePlakUAText Fallback normal normal"
+  ],
+  "canvases": [],
+  "libs": [],
+  "animations": [
+    {
+      "kind": "CSSAnimation",
+      "animationName": "HeroCallout-module-scss-module__U0hkWW__heroContentFadeInUp",
+      "transitionProperty": null,
+      "target": "p.HeroCallout-module-scss-module__U0hkWW__hero__snipe_text",
+      "timing": {
+        "delay": 500,
+        "direction": "normal",
+        "duration": 400,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "both",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "transform": "translate3d(0px, 24px, 0px)",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "transform": "translate(0px)",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "HeroCallout-module-scss-module__U0hkWW__heroContentFadeInUp",
+      "transitionProperty": null,
+      "target": "div.HeroCallout-module-scss-module__U0hkWW__hero__header.HeroCallout-module-scss-module__U0hkWW__headline1",
+      "timing": {
+        "delay": 700,
+        "direction": "normal",
+        "duration": 400,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "both",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "transform": "translate3d(0px, 24px, 0px)",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "transform": "translate(0px)",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "HeroCallout-module-scss-module__U0hkWW__heroContentFadeInUp",
+      "transitionProperty": null,
+      "target": "div.CallsToAction-module-scss-module__Y-qweG__ctas.HeroCallout-module-scss-module__U0hkWW__hero__list",
+      "timing": {
+        "delay": 1100,
+        "direction": "normal",
+        "duration": 400,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "both",
+        "iterationStart": 0,
+        "iterations": 1
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease",
+          "composite": "auto",
+          "transform": "translate3d(0px, 24px, 0px)",
+          "opacity": "0",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "ease",
+          "composite": "auto",
+          "transform": "translate(0px)",
+          "opacity": "1",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "uawc-loading-animation",
+      "transitionProperty": null,
+      "target": "svg",
+      "timing": {
+        "delay": -600,
+        "direction": "normal",
+        "duration": 1000,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": null
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease-in-out",
+          "composite": "auto",
+          "opacity": "0.3",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.4,
+          "easing": "ease-in-out",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 0.4
+        },
+        {
+          "offset": 0.8,
+          "easing": "ease-in-out",
+          "composite": "auto",
+          "opacity": "0.3",
+          "computedOffset": 0.8
+        },
+        {
+          "offset": 1,
+          "easing": "ease-in-out",
+          "composite": "auto",
+          "opacity": "0.3",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "uawc-loading-animation",
+      "transitionProperty": null,
+      "target": "svg",
+      "timing": {
+        "delay": -400,
+        "direction": "normal",
+        "duration": 1000,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": null
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease-in-out",
+          "composite": "auto",
+          "opacity": "0.3",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.4,
+          "easing": "ease-in-out",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 0.4
+        },
+        {
+          "offset": 0.8,
+          "easing": "ease-in-out",
+          "composite": "auto",
+          "opacity": "0.3",
+          "computedOffset": 0.8
+        },
+        {
+          "offset": 1,
+          "easing": "ease-in-out",
+          "composite": "auto",
+          "opacity": "0.3",
+          "computedOffset": 1
+        }
+      ]
+    },
+    {
+      "kind": "CSSAnimation",
+      "animationName": "uawc-loading-animation",
+      "transitionProperty": null,
+      "target": "svg",
+      "timing": {
+        "delay": -200,
+        "direction": "normal",
+        "duration": 1000,
+        "easing": "linear",
+        "endDelay": 0,
+        "fill": "forwards",
+        "iterationStart": 0,
+        "iterations": null
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "ease-in-out",
+          "composite": "auto",
+          "opacity": "0.3",
+          "computedOffset": 0
+        },
+        {
+          "offset": 0.4,
+          "easing": "ease-in-out",
+          "composite": "auto",
+          "opacity": "1",
+          "computedOffset": 0.4
+        },
+        {
+          "offset": 0.8,
+          "easing": "ease-in-out",
+          "composite": "auto",
+          "opacity": "0.3",
+          "computedOffset": 0.8
+        },
+        {
+          "offset": 1,
+          "easing": "ease-in-out",
+          "composite": "auto",
+          "opacity": "0.3",
+          "computedOffset": 1
+        }
+      ]
+    }
+  ]
+}

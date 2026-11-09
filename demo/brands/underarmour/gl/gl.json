@@ -1,0 +1,36 @@
+{
+  "contexts": [
+    {
+      "el": "ref: <Node>",
+      "type": "webgl",
+      "width": 300,
+      "height": 150,
+      "cssWidth": 0,
+      "cssHeight": 0,
+      "attrs": {},
+      "renderer": "WebKit WebGL",
+      "vendor": "WebKit",
+      "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+      "shadingLanguage": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)"
+    },
+    {
+      "el": "ref: <Node>",
+      "type": "webgl",
+      "width": 64,
+      "height": 64,
+      "cssWidth": 0,
+      "cssHeight": 0,
+      "attrs": {},
+      "renderer": "WebKit WebGL",
+      "vendor": "WebKit",
+      "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+      "shadingLanguage": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)"
+    }
+  ],
+  "programs": [],
+  "errors": [],
+  "frames": 7,
+  "programUniforms": {},
+  "shaders": [],
+  "channels": {}
+}

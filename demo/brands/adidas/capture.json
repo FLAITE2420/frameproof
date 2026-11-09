@@ -1,0 +1,26 @@
+{
+  "url": "https://www.adidas.com/",
+  "out": "demo/brands/adidas",
+  "trigger": "load",
+  "fps": 10,
+  "duration": 600,
+  "preRoll": 0,
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "selector": null,
+  "clip": null,
+  "frames": 7,
+  "wallMs": 597,
+  "consoleErrors": [
+    "requestfailed https://tags.tiqcdn.com/utag/adidas/adidasglobal/prod/utag.js net::ERR_NAME_NOT_RESOLVED"
+  ],
+  "capturedAt": "2026-11-09T04:26:44.792Z",
+  "gl": {
+    "programs": 0,
+    "shaders": 0,
+    "animatedChannels": 0,
+    "drawsPerFrame": 0
+  }
+}

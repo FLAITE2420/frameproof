@@ -1,0 +1,32 @@
+{
+  "url": "https://www.nike.com/",
+  "out": "demo/brands/nike",
+  "trigger": "load",
+  "fps": 10,
+  "duration": 600,
+  "preRoll": 0,
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "selector": null,
+  "clip": null,
+  "frames": 7,
+  "wallMs": 3242,
+  "consoleErrors": [
+    "requestfailed https://s.go-mpulse.net/boomerang/AERUL-JUD3H-8RUDQ-SABVF-2UCEG?20200601 net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://s.go-mpulse.net/boomerang/AERUL-JUD3H-8RUDQ-SABVF-2UCEG?20200601 net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://api.nike.com/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/mfc net::ERR_ABORTED",
+    "TypeError: i is not a function",
+    "requestfailed https://js-agent.newrelic.com/nr-spa-1.324.1.min.js net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://js-agent.newrelic.com/nr-spa-1.324.1.min.js net::ERR_NAME_NOT_RESOLVED",
+    "requestfailed https://assets.nmp.nike.com/video/ad1a0b78bed2705e/ad1a0b78bed2705evideo_2_000000001.cmfv net::ERR_ABORTED"
+  ],
+  "capturedAt": "2026-11-09T04:26:34.686Z",
+  "gl": {
+    "programs": 0,
+    "shaders": 0,
+    "animatedChannels": 0,
+    "drawsPerFrame": 0
+  }
+}
