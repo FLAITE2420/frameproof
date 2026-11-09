@@ -18,6 +18,8 @@ frameproof removes that by construction: the page runs on a frozen clock that th
 
 Measured on this repo's example (2 runs, 25 fps, 1440x900): **0.0000 % pixel mismatch, 0 s timing drift, 0 px track delta.**
 
+The hard case is a page that renders its own clock (`examples/edge/clock-probe.html` prints `Date.now()`, `performance.now()` and a rAF counter). There the floor is **0.005–0.01 % of pixels and still 0 s of timing drift**: the frames land on the same instants, but work done during page load is not entirely ours. That number, not zero, is the honest floor for JS-rendered content.
+
 ## Install
 
 ```sh
@@ -77,7 +79,7 @@ node src/cli.mjs sheet compare --ref ref --clone copy-1 --diff compare-1/diff --
 
 ## Measured results in this repo
 
-`npm test` runs 25 hand-written checks (10 end to end, 15 on the edges) plus 766 generated fuzz checks. Current run on Node 22.23.1, Chromium 1248, 1440x900 @ 25 fps:
+`npm test` runs 29 hand-written checks (10 end to end, 19 on the edges) plus 766 generated fuzz checks. Current run on Node 22.23.1, Chromium 1248, 1440x900 @ 25 fps:
 
 | check | result |
 |---|---|
@@ -113,6 +115,10 @@ The bad copy in `examples/copy-bad.html` is worth a look: its **mean pixel misma
 | selector that does not exist | falls back to the viewport instead of hanging 30 s |
 | 60 fps capture | 31 frames for 500 ms |
 | `--level looks-nice` | rejected by name |
+| a page that prints `Date.now()` | 0 s timing drift, 0.003 % pixels: the floor for JS-rendered content |
+| re-capture into the same `--out` | old frames are cleared: 11 then 3 |
+| `translate`/`scale`/`rotate` properties | tracked without any `transform`: ty 80 px, scale 1.30, 20° |
+| a transition born at 300 ms | runs from its own zero: 267 px at 400 ms, 300 px at 800 ms |
 
 ## Fuzz battery
 

@@ -47,15 +47,19 @@ const framesIn = (dir) => (dir ? frameList(existsSync(join(dir, "frames")) ? joi
 export async function sheetMain(argv) {
   const opts = parseArgs(argv);
   const mode = opts._[0];
-  if (opts.help || (mode !== "filmstrip" && mode !== "compare")) { console.log(HELP.trim()); return 0; }
+  if (opts.help) { console.log(HELP.trim()); return 0; }
+  if (mode !== "filmstrip" && mode !== "compare") { console.log(HELP.trim()); return 2; }
   const outDir = ensureDir(opts.out ?? "./sheets");
   const every = num(opts.every, 1);
+  if (!Number.isInteger(every) || every < 1) throw new Error(`--every must be an integer of 1 or more, got ${opts.every}`);
   const pages = [];
 
   if (mode === "filmstrip") {
     const cols = num(opts.cols, 6);
+    if (!Number.isInteger(cols) || cols < 1 || cols > 24) throw new Error(`--cols must be an integer from 1 to 24, got ${opts.cols}`);
     const width = num(opts.width, 240);
     const rows = num(opts.rows, 4);
+    if (!Number.isInteger(rows) || rows < 1 || rows > 50) throw new Error(`--rows must be an integer from 1 to 50, got ${opts.rows}`);
     const meta = (() => { try { return readJson(join(opts.frames, "frames.json")); } catch { return null; } })();
     const fps = num(opts.fps, meta?.fps ?? 25);
     const files = framesIn(opts.frames);
@@ -74,6 +78,7 @@ export async function sheetMain(argv) {
   } else {
     const width = num(opts.width, 420);
     const rows = num(opts.rows, 5);
+    if (!Number.isInteger(rows) || rows < 1 || rows > 50) throw new Error(`--rows must be an integer from 1 to 50, got ${opts.rows}`);
     const ref = framesIn(opts.ref);
     const copy = framesIn(opts.clone);
     if (!ref.length) throw new Error(`no frames in ${opts.ref}`);
@@ -81,6 +86,7 @@ export async function sheetMain(argv) {
     const diff = opts.diff ? framesIn(opts.diff) : [];
     const fps = (() => { try { return readJson(join(opts.ref, "frames.json")).fps; } catch { return num(opts.fps, 25); } })();
     const offset = num(opts.offset, 0);
+    if (!Number.isInteger(offset)) throw new Error(`--offset must be a whole number of frames, got ${opts.offset}`);
     const columns = diff.length ? 3 : 2;
     const rowsHtml = [];
     for (let i = 0; i < ref.length; i += every) {

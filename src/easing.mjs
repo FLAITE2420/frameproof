@@ -116,7 +116,8 @@ const fmt = (f) => `${f.name} cubic-bezier(${f.cp.join(",")}) over ~${Math.round
 
 export async function easingMain(argv) {
   const opts = parseArgs(argv);
-  if (opts.help || !opts.track) { console.log(HELP.trim()); return 0; }
+  if (opts.help) { console.log(HELP.trim()); return 0; }
+  if (!opts.track) { console.log(HELP.trim()); return 2; }
   const prop = String(opts.prop ?? "y");
   if (!PROPS.has(prop)) throw new Error(`unknown --prop "${prop}", use one of ${[...PROPS].join(", ")}`);
   const selector = String(opts.selector ?? "");
@@ -124,6 +125,7 @@ export async function easingMain(argv) {
   const series = seriesOf(track, selector, prop, opts["from-ms"] !== undefined ? num(opts["from-ms"], 0) : undefined, opts["to-ms"] !== undefined ? num(opts["to-ms"], 0) : undefined);
   if (!series.length) throw new Error(`no samples for selector "${selector}" prop "${prop}" in ${opts.track}`);
   const result = fit(series);
+  if (!result) throw new Error(`series too short to fit: ${series.length} sample(s) of "${prop}" for "${selector}". Capture at least 3 frames of the motion.`);
   const out = {
     selector, prop, samples: series.length,
     start: +result.v0.toFixed(4), end: +result.v1.toFixed(4), change: +result.change.toFixed(4),
@@ -147,6 +149,7 @@ export async function easingMain(argv) {
         sum += d;
         n++;
       }
+      if (!n) throw new Error(`no timestamps in common between ${opts.track} and ${opts["compare-track"]}: both tracks need the same --fps and pre-roll`);
       const otherFit = fit(otherSeries);
       out.compare = {
         against: opts["compare-track"],

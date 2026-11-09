@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>edge: animation born late</title>
+<style>
+  html,body{margin:0;background:#0b0b0c;color:#fff;font:16px ui-sans-serif,system-ui}
+  .box{position:absolute;left:60px;top:60px;width:200px;height:120px;border-radius:12px;background:#0ea5e9;
+       transform:translateX(0);transition:transform 300ms cubic-bezier(.2,.8,.2,1)}
+  .box.go{transform:translateX(300px)}
+</style></head><body>
+<div class="box" id="box"></div>
+<script>
+  setTimeout(() => document.getElementById("box").classList.add("go"), 300);
+</script>
+</body></html>

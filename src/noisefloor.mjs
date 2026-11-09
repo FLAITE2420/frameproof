@@ -43,8 +43,10 @@ const trackDelta = (a, b) => {
 
 export async function noisefloorMain(argv) {
   const opts = parseArgs(argv);
-  if (opts.help || !opts.url) { console.log(HELP.trim()); return 0; }
+  if (opts.help) { console.log(HELP.trim()); return 0; }
+  if (!opts.url) { console.log(HELP.trim()); return 2; }
   const runs = num(opts.runs, 3);
+  if (!Number.isInteger(runs) || runs < 2) throw new Error(`--runs must be an integer of 2 or more, got ${opts.runs}. One run measures nothing.`);
   const base = ensureDir(opts.out ?? "./noisefloor");
   const floorMax = num(opts["floor-max"], 0.002);
   const floorMs = num(opts["floor-ms"], 0.04);
@@ -90,5 +92,5 @@ export async function noisefloorMain(argv) {
   };
   writeFileSync(join(base, "floor.json"), JSON.stringify(result, null, 2) + "\n");
   console.log(JSON.stringify({ ...result, runs: rows.map(({ track, ...r }) => r) }, null, 2));
-  return 0;
+  return ok ? 0 : 1;
 }

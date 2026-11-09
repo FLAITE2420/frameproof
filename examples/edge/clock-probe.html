@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>clock probe</title>
+<style>html,body{margin:0;background:#000;color:#0f0;font:28px ui-monospace,monospace}div{padding:20px}</style>
+</head><body>
+<div id="t">boot</div>
+<script>
+  const show = () => {
+    document.getElementById("t").textContent =
+      "Date.now=" + Date.now() + " perf=" + performance.now().toFixed(1) + " frames=" + (window.__n = (window.__n || 0) + 1);
+  };
+  show();
+  requestAnimationFrame(show);
+  setTimeout(show, 300);
+</script>
+</body></html>

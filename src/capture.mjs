@@ -1,7 +1,8 @@
 // capture.mjs — record a page on a virtual clock: numbered frames, the animation
 // spec the page declares, and a per-frame track of chosen elements.
 import { chromium } from "playwright";
-import { join } from "node:path";
+import { join, resolve } from "node:path";
+import { rmSync } from "node:fs";
 import { ensureDir, frameList, num, pad, parseArgs, parseClip, parseViewport, writeJson } from "./lib.mjs";
 
 const HELP = `
@@ -47,10 +48,15 @@ export async function capture(opts) {
   const trackSelectors = String(opts.track ?? opts.selector ?? "")
     .split(",").map((s) => s.trim()).filter(Boolean);
   const trigger = opts.trigger === true ? "load" : (opts.trigger ?? "load");
+  if (!["load", "none", "hover", "scroll"].includes(trigger)) {
+    throw new Error(`--trigger must be load, none, hover or scroll, got "${trigger}"`);
+  }
   const waitBefore = num(opts["wait-before"], 0);
 
   const framesDir = ensureDir(join(out, "frames"));
-  for (const f of frameList(framesDir)) { /* keep old frames out of the run */ }
+  // Start from an empty frame directory: a shorter re-capture into the same --out
+  // must not inherit the longer run's frames.
+  for (const f of frameList(framesDir)) { try { rmSync(f); } catch {} }
   const browser = await chromium.launch({
     headless: !opts.headed,
     args: ["--force-color-profile=srgb", "--hide-scrollbars", "--font-render-hinting=none", "--disable-lcd-text"],
@@ -84,9 +90,15 @@ export async function capture(opts) {
   });
 
   // The clock starts frozen: timers, Date and requestAnimationFrame only move
-  // when this script advances them, so frame k is always the same instant.
-  await page.clock.install({ time: new Date("2026-01-01T00:00:00Z") });
-  await page.goto(opts.url, { waitUntil: "load", timeout: 60000 });
+  // when this script advances them. install() alone leaves time flowing, which
+  // makes a page that renders Date.now() differ between two captures; pauseAt()
+  // freezes it. Frame k is then always the same instant.
+  const epoch = new Date("2026-01-01T00:00:00Z");
+  await page.clock.install({ time: epoch });
+  await page.clock.pauseAt(epoch);
+  const rawUrl = String(opts.url);
+  const url = /^(https?:|file:|data:|about:)/.test(rawUrl) ? rawUrl : "file://" + resolve(rawUrl);
+  await page.goto(url, { waitUntil: "load", timeout: 60000 });
   await page.evaluate(() => Promise.race([document.fonts?.ready ?? true, new Promise((r) => setTimeout(r, 2000))]));
 
   if (waitBefore > 0) await page.clock.runFor(waitBefore);
@@ -154,6 +166,10 @@ export async function capture(opts) {
       };
     });
     for (const a of anims) { try { a.pause(); a.currentTime = 0; } catch {} }
+    // Animations that already exist start at the capture's zero; anything created
+    // later (a timer toggling a class, a hover transition) is timed from the frame
+    // it first appeared, not from the capture's zero.
+    window.__fpBorn = new Map(anims.map((a) => [a, 0]));
 
     const fonts = [];
     try { document.fonts.forEach((f) => fonts.push(`${f.family} ${f.weight} ${f.style}`)); } catch {}
@@ -184,24 +200,38 @@ export async function capture(opts) {
     };
   });
 
-  const sample = async (t) => page.evaluate(({ selectors, time }) => {
+  const sample = async (t) => page.evaluate(({ selectors }) => {
     const read = (el) => {
       if (!el) return null;
       const r = el.getBoundingClientRect();
       const cs = getComputedStyle(el);
-      const m = cs.transform === "none" ? null : cs.transform.match(/matrix\(([^)]+)\)/)?.[1].split(",").map(Number);
+      // DOMMatrixReadOnly understands matrix(), matrix3d() and 'none'; the
+      // individual translate/scale/rotate properties are added on top.
+      let m = null;
+      try { m = new DOMMatrixReadOnly(cs.transform === "none" ? "" : cs.transform); } catch { m = null; }
+      const tProp = (p) => {
+        const v = cs[p];
+        if (!v || v === "none") return null;
+        const nums = String(v).match(/-?[\d.]+/g)?.map(Number) ?? [];
+        return nums.length ? nums : null;
+      };
+      const tr = tProp("translate");
+      const sc = tProp("scale");
+      const ro = tProp("rotate");
+      const tx = (m ? m.m41 : 0) + (tr ? tr[0] : 0);
+      const ty = (m ? m.m42 : 0) + (tr && tr.length > 1 ? tr[1] : 0);
+      const scale = m ? Math.hypot(m.m11, m.m12) * (sc ? sc[0] : 1) : (sc ? sc[0] : 1);
+      const rotate = m ? Math.atan2(m.m12, m.m11) * 180 / Math.PI + (ro ? ro[0] : 0) : (ro ? ro[0] : 0);
       return {
         x: r.x, y: r.y, w: r.width, h: r.height,
         opacity: Number(cs.opacity),
-        tx: m ? m[4] : 0, ty: m ? m[5] : 0,
-        scale: m ? m[0] : 1,
-        rotate: m ? Math.atan2(m[1], m[0]) * 180 / Math.PI : 0,
+        tx, ty, scale, rotate,
       };
     };
     const out = {};
     for (const s of selectors) out[s] = read(document.querySelector(s));
     return out;
-  }, { selectors: trackSelectors, time: t });
+  }, { selectors: trackSelectors });
 
   const stepMs = 1000 / 60;
   let simMs = 0;
@@ -221,8 +251,12 @@ export async function capture(opts) {
     }
     if (t >= 0) {
       await page.evaluate((time) => {
+        const born = window.__fpBorn ?? (window.__fpBorn = new Map());
         for (const a of document.getAnimations()) {
-          try { a.currentTime = time; } catch {}
+          try {
+            if (!born.has(a)) born.set(a, time);
+            a.currentTime = Math.max(0, time - born.get(a));
+          } catch {}
         }
       }, t);
     }
@@ -246,7 +280,8 @@ export async function capture(opts) {
 
 export async function captureMain(argv) {
   const opts = parseArgs(argv);
-  if (opts.help || !opts.url) { console.log(HELP.trim()); return 0; }
+  if (opts.help) { console.log(HELP.trim()); return 0; }
+  if (!opts.url) { console.log(HELP.trim()); return 2; }
   const r = await capture(opts);
   console.log(JSON.stringify(r, null, 2));
   return 0;

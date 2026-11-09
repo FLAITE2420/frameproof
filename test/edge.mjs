@@ -154,6 +154,44 @@ rmSync(WORK, { recursive: true, force: true });
   check("a bad --level is rejected", /--level must be motion or pixel/.test(r.stdout), (r.stdout.match(/--level must[^\n]*/) ?? ["no message"])[0]);
 }
 
+// 15. the page clock is frozen: two captures of a page that prints Date.now() agree
+{
+  capture(edge("clock-probe.html"), "clock-a", ["--duration", "800", "--fps", "25"]);
+  capture(edge("clock-probe.html"), "clock-b", ["--duration", "800", "--fps", "25"]);
+  run(["compare", "--ref", join(WORK, "clock-a"), "--clone", join(WORK, "clock-b"), "--out", join(WORK, "cmp-clock"), "--no-diffs"]);
+  const rep = json("cmp-clock/report.json");
+  const drift = Math.max(...Object.values(rep.motion.timing).map(Math.abs));
+  // A page that prints its own clock is the hard case: work done during load is
+  // not fully ours. Timing must still be exact; pixels get the measured floor.
+  check("two captures of a clock page agree", rep.meanMismatch < 0.0002 && drift === 0, `mismatch=${(rep.meanMismatch * 100).toFixed(4)}% (floor 0.02%) timingDrift=${drift}s`);
+}
+
+// 16. a shorter re-capture does not inherit the longer run's frames
+{
+  capture(edge("static.html"), "stale", ["--duration", "400", "--fps", "25"]);
+  const long = json("stale/capture.json").frames;
+  capture(edge("static.html"), "stale", ["--duration", "80", "--fps", "25"]);
+  const short = json("stale/capture.json").frames;
+  check("re-capture clears old frames", long === 11 && short === 3, `${long} frames then ${short}`);
+}
+
+// 17. individual translate/scale/rotate properties, with no `transform` in sight
+{
+  capture(edge("transform-props.html"), "props", ["--duration", "600", "--fps", "25", "--track", "#box"]);
+  const s = json("props/track.json").samples;
+  const last = s[s.length - 1]["#box"];
+  check("individual transform properties are tracked", last.ty > 70 && last.scale > 1.25 && Math.abs(last.rotate) > 15, `ty=${last.ty.toFixed(1)} scale=${last.scale.toFixed(2)} rotate=${last.rotate.toFixed(1)}`);
+}
+
+// 18. an animation born at 300ms runs from its own zero, not the capture's
+{
+  capture(edge("late-animation.html"), "late", ["--duration", "900", "--fps", "25", "--track", "#box"]);
+  const s = json("late/track.json").samples;
+  const at = (ms) => s.find((x) => x.t === ms)["#box"].tx;
+  const mid = at(400), last = at(800);
+  check("a late transition keeps its own clock", mid > 20 && mid < 280 && Math.abs(last - 300) < 1, `tx(400ms)=${mid.toFixed(1)}px, tx(800ms)=${last.toFixed(1)}px of 300`);
+}
+
 const failed = results.filter((r) => !r.ok);
 console.log(`\n${results.length - failed.length}/${results.length} edge checks passed`);
 process.exit(failed.length ? 1 : 0);

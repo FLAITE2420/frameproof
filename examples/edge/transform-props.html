@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>edge: individual transform properties</title>
+<style>
+  html,body{margin:0;background:#0b0b0c;color:#fff;font:16px ui-sans-serif,system-ui}
+  .box{position:absolute;left:60px;top:60px;width:200px;height:120px;border-radius:12px;background:#a855f7;
+       /* no `transform` at all: the individual properties do the work */
+       translate: 0 0; scale: 1; rotate: 0deg;
+       animation: move 500ms cubic-bezier(.16,1,.3,1) both}
+  @keyframes move{to{translate: 0 80px; scale: 1.3; rotate: 20deg}}
+</style></head><body><div class="box" id="box"></div></body></html>

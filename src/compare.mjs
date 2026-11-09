@@ -44,6 +44,9 @@ function activity(gA, gB) {
 function crop(png, region) {
   if (!region) return png;
   const { x, y, width, height } = region;
+  if (x < 0 || y < 0 || x + width > png.width || y + height > png.height) {
+    throw new Error(`--region ${x},${y},${width},${height} falls outside the ${png.width}x${png.height} frame`);
+  }
   const out = new PNG({ width, height });
   for (let row = 0; row < height; row++) {
     const srcStart = ((y + row) * png.width + x) * 4;
@@ -91,9 +94,12 @@ export async function compare(opts) {
 
   // Align: which clone frame corresponds to reference frame 0.
   let offset = opts.offset !== undefined && opts.offset !== true ? Number(opts.offset) : null;
-  if (offset !== null && !Number.isFinite(offset)) throw new Error(`--offset must be a frame number, got "${opts.offset}"`);
+  if (offset !== null && (!Number.isInteger(offset) || Math.abs(offset) > 10000)) {
+    throw new Error(`--offset must be a whole number of frames, got "${opts.offset}"`);
+  }
   if (offset === null) {
     const maxShift = num(opts["max-shift"], 8);
+    if (!Number.isInteger(maxShift) || maxShift < 0 || maxShift > 120) throw new Error(`--max-shift must be a whole number from 0 to 120, got ${opts["max-shift"]}`);
     const probe = Math.min(12, refPngs.length, clonePngs.length);
     // score every shift, then prefer the smallest absolute shift on a tie:
     // on a page where nothing moves, every shift scores zero and the first one
@@ -201,6 +207,7 @@ function readJsonSafe(p) {
 
 export async function compareMain(argv) {
   const opts = parseArgs(argv);
-  if (opts.help || !opts.ref || !opts.clone) { console.log(HELP.trim()); return 0; }
+  if (opts.help) { console.log(HELP.trim()); return 0; }
+  if (!opts.ref || !opts.clone) { console.log(HELP.trim()); return 2; }
   return compare(opts);
 }
