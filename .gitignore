@@ -35,3 +35,5 @@ demo/glit-ref/
 demo/glit-slow/
 demo/linear-grid.json
 .campaign-out/
+demo/brands/*/frames/
+demo/brands/*/gl/shaders/
