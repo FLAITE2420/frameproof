@@ -1,0 +1,65 @@
+[
+ {
+  "file": "/home/slothsmile/Desktop/investigaciones/frameproof/demo/videos/01-hero-stagger.mp4",
+  "label": "Hero: kicker + tres líneas, 100ms entre cada una",
+  "bytes": 70850,
+  "frames": 56,
+  "fps": 25
+ },
+ {
+  "file": "/home/slothsmile/Desktop/investigaciones/frameproof/demo/videos/02-headline-wipe.mp4",
+  "label": "Titular con clip-path, 760ms y 180ms de desfase",
+  "bytes": 29745,
+  "frames": 56,
+  "fps": 25
+ },
+ {
+  "file": "/home/slothsmile/Desktop/investigaciones/frameproof/demo/videos/03-ticker.mp4",
+  "label": "Dos cintas opuestas, 2400ms por vuelta",
+  "bytes": 467059,
+  "frames": 56,
+  "fps": 25
+ },
+ {
+  "file": "/home/slothsmile/Desktop/investigaciones/frameproof/demo/videos/04-product-card.mp4",
+  "label": "Ficha 3D: rotateY -34 a 18 grados",
+  "bytes": 85253,
+  "frames": 56,
+  "fps": 25
+ },
+ {
+  "file": "/home/slothsmile/Desktop/investigaciones/frameproof/demo/videos/05-stroke-draw.mp4",
+  "label": "Trazo SVG, 1500ms + 1200ms con offset",
+  "bytes": 14811,
+  "frames": 56,
+  "fps": 25
+ },
+ {
+  "file": "/home/slothsmile/Desktop/investigaciones/frameproof/demo/videos/06-parallax.mp4",
+  "label": "Parallax: tres capas a 0.2 / 0.45 / 0.7",
+  "bytes": 136263,
+  "frames": 101,
+  "fps": 25
+ },
+ {
+  "file": "/home/slothsmile/Desktop/investigaciones/frameproof/demo/videos/07-blend.mp4",
+  "label": "mix-blend-mode difference y overlay",
+  "bytes": 167599,
+  "frames": 76,
+  "fps": 25
+ },
+ {
+  "file": "/home/slothsmile/Desktop/investigaciones/frameproof/demo/videos/pair-resend-hero.mp4",
+  "label": "",
+  "bytes": 198404,
+  "frames": 36,
+  "fps": 25
+ },
+ {
+  "file": "/home/slothsmile/Desktop/investigaciones/frameproof/demo/videos/pair-cube-shader.mp4",
+  "label": "",
+  "bytes": 24946,
+  "frames": 21,
+  "fps": 25
+ }
+]

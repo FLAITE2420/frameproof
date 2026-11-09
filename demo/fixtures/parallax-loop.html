@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>parallax loop</title>
+<style>html,body{margin:0;height:2000px;background:linear-gradient(#0b0b0c,#15161a)}
+.card{position:absolute;left:60px;width:320px;height:200px;border-radius:16px;background:linear-gradient(120deg,#0ea5e9,#a855f7)}
+#a{top:120px}#b{top:420px;background:linear-gradient(120deg,#f97316,#ef4444)}#c{top:720px;background:linear-gradient(120deg,#22c55e,#14b8a6)}</style></head>
+<body><div class="card" id="a"></div><div class="card" id="b"></div><div class="card" id="c"></div>
+<script>
+  const cards=[["a",0.2],["b",0.45],["c",0.7]];
+  const t0=performance.now();
+  const tick=(now)=>{const s=((now-t0)/1000)%4/4; // one 4s pass
+    const y=s*900;
+    for(const [id,f] of cards){document.getElementById(id).style.transform="translateY("+(-y*f)+"px)";}
+    requestAnimationFrame(tick);};
+  requestAnimationFrame(tick);
+</script></body></html>

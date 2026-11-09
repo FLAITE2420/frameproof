@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>hero stagger</title>
+<style>
+html,body{margin:0;height:900px;background:radial-gradient(120% 90% at 20% 0%,#14243a,#08090b 60%);color:#f4f4f7;font-family:ui-sans-serif,system-ui}
+.wrap{position:absolute;left:72px;top:210px}
+.line{font:800 92px/0.98 ui-sans-serif,system-ui;letter-spacing:-.035em;opacity:0;transform:translateY(46px)}
+.line span{background:linear-gradient(92deg,#7dd3fc,#c4b5fd 55%,#fda4af);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kick{font:600 13px/1 ui-monospace,monospace;letter-spacing:.22em;color:#8b93a7;opacity:0;margin-bottom:26px}
+.bar{position:absolute;left:72px;bottom:90px;height:3px;width:0;background:linear-gradient(90deg,#7dd3fc,#c4b5fd)}
+</style></head><body>
+<div class="wrap"><div class="kick" id="k">CAMPAIGN / SS26</div>
+<div class="line" id="l1">Six frames,</div><div class="line" id="l2"><span>one instant</span></div><div class="line" id="l3">each.</div></div>
+<div class="bar" id="b"></div>
+<style>
+#k{animation:fade 500ms ease-out 0ms both}
+#l1{animation:rise 620ms cubic-bezier(.16,1,.3,1) 120ms both}
+#l2{animation:rise 620ms cubic-bezier(.16,1,.3,1) 220ms both}
+#l3{animation:rise 620ms cubic-bezier(.16,1,.3,1) 320ms both}
+#b{animation:grow 900ms cubic-bezier(.22,1,.36,1) 480ms both}
+@keyframes fade{to{opacity:1}}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes grow{to{width:520px}}
+</style></body></html>

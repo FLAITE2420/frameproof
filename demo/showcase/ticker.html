@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ticker</title>
+<style>
+html,body{margin:0;height:900px;background:#08090b;overflow:hidden;font-family:ui-sans-serif,system-ui}
+.band{position:absolute;left:0;right:0;display:flex;align-items:center;height:120px;border-top:1px solid #27272a;border-bottom:1px solid #27272a;overflow:hidden}
+.band.one{top:300px;background:#0d0e11}.band.two{top:430px;background:#101116}
+.track{display:flex;gap:48px;white-space:nowrap;font:800 64px/1 ui-sans-serif,system-ui;letter-spacing:-.03em}
+.one .track{color:#f4f4f7;animation:m1 2400ms linear infinite}
+.two .track{color:transparent;-webkit-text-stroke:1.5px #52525b;animation:m2 2400ms linear infinite}
+.track i{font-style:normal;color:#f97316}
+@keyframes m1{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes m2{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.tag{position:absolute;left:72px;top:210px;font:600 13px/1 ui-monospace,monospace;letter-spacing:.22em;color:#8b93a7}
+</style></head><body><div class="tag">KINETIC TYPE / 2400MS</div>
+<div class="band one"><div class="track"><span>RUN THE CITY <i>·</i> NO FINISH LINE <i>·</i> SS26 <i>·</i> RUN THE CITY <i>·</i> NO FINISH LINE <i>·</i> SS26 <i>·</i></span><span>RUN THE CITY <i>·</i> NO FINISH LINE <i>·</i> SS26 <i>·</i> RUN THE CITY <i>·</i> NO FINISH LINE <i>·</i> SS26 <i>·</i></span></div></div>
+<div class="band two"><div class="track"><span>440 GRAMS · CARBON PLATE · 440 GRAMS · CARBON PLATE · 440 GRAMS · CARBON PLATE ·</span><span>440 GRAMS · CARBON PLATE · 440 GRAMS · CARBON PLATE · 440 GRAMS · CARBON PLATE ·</span></div></div>
+</body></html>

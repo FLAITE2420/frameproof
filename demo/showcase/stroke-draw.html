@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>stroke draw</title>
+<style>
+html,body{margin:0;height:900px;background:#08090b;overflow:hidden}
+svg{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%)}
+.lbl{position:absolute;left:72px;bottom:110px;font:600 13px/1 ui-monospace,monospace;letter-spacing:.22em;color:#8b93a7}
+.p{fill:none;stroke:#f4f4f7;stroke-width:3;stroke-linecap:round;stroke-dasharray:1400;stroke-dashoffset:1400;animation:d 1500ms cubic-bezier(.22,1,.36,1) both}
+.p2{fill:none;stroke:#f97316;stroke-width:3;stroke-linecap:round;stroke-dasharray:900;stroke-dashoffset:900;animation:d 1200ms cubic-bezier(.22,1,.36,1) 500ms both}
+@keyframes d{to{stroke-dashoffset:0}}
+</style></head><body>
+<svg width="820" height="300" viewBox="0 0 820 300">
+<path class="p" d="M40 210 C 120 40, 250 40, 300 150 S 460 260, 520 120 S 680 20, 780 150"/>
+<path class="p2" d="M60 250 L 760 250"/>
+</svg><div class="lbl">SVG STROKE / 1500MS + 1200MS OFFSET</div></body></html>

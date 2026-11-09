@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>blend loop</title>
+<style>html,body{margin:0;background:#08090a;overflow:hidden}
+#bg{position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,#f97316,#7c2d12 45%,#08090a 75%)}
+#w{position:absolute;top:180px;left:0;width:420px;height:420px;border-radius:50%;background:#0ea5e9;mix-blend-mode:difference;filter:blur(2px)}
+#t{position:absolute;left:80px;top:640px;font:800 96px/1 ui-sans-serif,system-ui;letter-spacing:-.03em;color:#f5f5f7;mix-blend-mode:overlay}</style>
+</head><body><div id="bg"></div><div id="w"></div><div id="t">KAPPA</div>
+<script>const t0=performance.now();const w=document.getElementById("w");
+const tick=(now)=>{const s=((now-t0)/1000)%3/3;w.style.transform="translateX("+(s*900)+"px) scale("+(1+0.25*Math.sin(s*Math.PI))+")";requestAnimationFrame(tick);};requestAnimationFrame(tick);</script></body></html>

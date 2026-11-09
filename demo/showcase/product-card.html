@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>product card</title>
+<style>
+html,body{margin:0;height:900px;background:radial-gradient(80% 70% at 70% 20%,#1b1b22,#08090b 70%);font-family:ui-sans-serif,system-ui;overflow:hidden}
+.scene{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);perspective:1200px}
+.card{width:420px;height:520px;border-radius:26px;background:linear-gradient(160deg,#26262e,#101014 60%);border:1px solid #2f2f38;
+ box-shadow:0 40px 80px -30px #000;transform-style:preserve-3d;animation:turn 1400ms cubic-bezier(.16,1,.3,1) both}
+.shoe{position:absolute;left:40px;right:40px;top:150px;height:180px;border-radius:90px 120px 70px 100px/90px 90px 70px 70px;
+ background:linear-gradient(120deg,#f97316,#f43f5e 45%,#a855f7);box-shadow:inset 0 -18px 40px #00000066;transform:translateZ(40px)}
+.model{position:absolute;left:44px;bottom:44px;right:44px;color:#f4f4f7}
+.model b{display:block;font:800 34px/1.05 ui-sans-serif,system-ui;letter-spacing:-.03em}
+.model span{display:block;margin-top:10px;font:600 12px/1 ui-monospace,monospace;letter-spacing:.2em;color:#8b93a7}
+.gloss{position:absolute;inset:0;border-radius:26px;background:linear-gradient(115deg,#ffffff22 0%,transparent 38%);transform:translateZ(60px)}
+@keyframes turn{from{transform:rotateY(-34deg) rotateX(12deg) translateZ(-120px)}to{transform:rotateY(18deg) rotateX(4deg) translateZ(0)}}
+</style></head><body><div class="scene"><div class="card"><div class="shoe"></div><div class="gloss"></div>
+<div class="model"><b>Velocity 26</b><span>CARBON / 440 G</span></div></div></div></body></html>

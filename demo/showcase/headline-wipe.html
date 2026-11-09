@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>headline wipe</title>
+<style>
+html,body{margin:0;height:900px;background:#08090b;overflow:hidden}
+.glow{position:absolute;inset:-20% -10% auto -10%;height:70%;background:radial-gradient(60% 60% at 30% 40%,#1d4ed8 0%,transparent 70%);filter:blur(20px);opacity:.55}
+h1{position:absolute;left:72px;top:250px;margin:0;font:800 128px/0.95 ui-sans-serif,system-ui;letter-spacing:-.045em;color:#f5f5f7}
+h1 em{font-style:normal;background:linear-gradient(92deg,#f97316,#f43f5e,#a855f7);-webkit-background-clip:text;background-clip:text;color:transparent}
+#a{clip-path:inset(0 100% 0 0);animation:w 760ms cubic-bezier(.22,1,.36,1) 80ms both}
+#b{top:392px;clip-path:inset(0 100% 0 0);animation:w 760ms cubic-bezier(.22,1,.36,1) 260ms both}
+.rule{position:absolute;left:76px;top:640px;height:2px;width:0;background:#3f3f46;animation:r 800ms ease-out 900ms both}
+@keyframes w{to{clip-path:inset(0 0 0 0)}}
+@keyframes r{to{width:760px}}
+</style></head><body><div class="glow"></div>
+<h1 id="a">Built to</h1><h1 id="b"><em>move</em> you.</h1><div class="rule"></div></body></html>

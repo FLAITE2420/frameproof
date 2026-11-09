@@ -1,0 +1,64 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>frameproof — vídeos y recreaciones</title>
+<style>
+body{margin:0;background:#08090b;color:#e9e9ee;font:15px/1.5 ui-sans-serif,system-ui,sans-serif}
+header{padding:28px 30px 10px} h1{margin:0 0 8px;font-size:23px}
+.sub{color:#8b8b95;font-size:13px;max-width:820px}
+h2{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#8b8b95;margin:32px 30px 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:22px;padding:0 30px 20px}
+figure{margin:0;background:#0f1013;border:1px solid #1f2027;border-radius:12px;overflow:hidden}
+video{display:block;width:100%;background:#000}
+figcaption{padding:11px 14px;display:flex;flex-direction:column;gap:3px;font-size:13px}
+figcaption span{color:#8b8b95;font-size:11.5px;font-family:ui-monospace,monospace}
+ul{margin:0 30px 34px;padding-left:18px;font-size:14px}
+a{color:#7dd3fc;text-decoration:none} a:hover{text-decoration:underline}
+code{background:#15161a;padding:1px 5px;border-radius:4px;font-size:12.5px}
+</style></head><body>
+<header><h1>Así se ve el movimiento, frame por frame</h1>
+<div class="sub">Cada MP4 son los frames que capturó frameproof sobre un reloj congelado: 25 fps, un instante exacto por frame. Los dos últimos son pares comparados: referencia a la izquierda, copia a la derecha.</div></header>
+<h2>Siete recreaciones</h2>
+<div class="grid">
+  <figure>
+    <video src="videos/01-hero-stagger.mp4" poster="videos/posters/01-hero-stagger.png" controls loop muted playsinline preload="metadata"></video>
+    <figcaption><b>Hero: kicker + tres líneas, 100ms entre cada una</b><span>56 frames · 25 fps · 69 KB · 01-hero-stagger.mp4</span></figcaption>
+  </figure>
+  <figure>
+    <video src="videos/02-headline-wipe.mp4" poster="videos/posters/02-headline-wipe.png" controls loop muted playsinline preload="metadata"></video>
+    <figcaption><b>Titular con clip-path, 760ms y 180ms de desfase</b><span>56 frames · 25 fps · 28 KB · 02-headline-wipe.mp4</span></figcaption>
+  </figure>
+  <figure>
+    <video src="videos/03-ticker.mp4" poster="videos/posters/03-ticker.png" controls loop muted playsinline preload="metadata"></video>
+    <figcaption><b>Dos cintas opuestas, 2400ms por vuelta</b><span>56 frames · 25 fps · 456 KB · 03-ticker.mp4</span></figcaption>
+  </figure>
+  <figure>
+    <video src="videos/04-product-card.mp4" poster="videos/posters/04-product-card.png" controls loop muted playsinline preload="metadata"></video>
+    <figcaption><b>Ficha 3D: rotateY -34 a 18 grados</b><span>56 frames · 25 fps · 83 KB · 04-product-card.mp4</span></figcaption>
+  </figure>
+  <figure>
+    <video src="videos/05-stroke-draw.mp4" poster="videos/posters/05-stroke-draw.png" controls loop muted playsinline preload="metadata"></video>
+    <figcaption><b>Trazo SVG, 1500ms + 1200ms con offset</b><span>56 frames · 25 fps · 14 KB · 05-stroke-draw.mp4</span></figcaption>
+  </figure>
+  <figure>
+    <video src="videos/06-parallax.mp4" poster="videos/posters/06-parallax.png" controls loop muted playsinline preload="metadata"></video>
+    <figcaption><b>Parallax: tres capas a 0.2 / 0.45 / 0.7</b><span>101 frames · 25 fps · 133 KB · 06-parallax.mp4</span></figcaption>
+  </figure>
+  <figure>
+    <video src="videos/07-blend.mp4" poster="videos/posters/07-blend.png" controls loop muted playsinline preload="metadata"></video>
+    <figcaption><b>mix-blend-mode difference y overlay</b><span>76 frames · 25 fps · 163 KB · 07-blend.mp4</span></figcaption>
+  </figure>
+  <figure>
+    <video src="videos/pair-cube-shader.mp4" poster="videos/posters/pair-cube-shader.png" controls loop muted playsinline preload="metadata"></video>
+    <figcaption><b>Referencia | copia — cubo con el shader alterado</b><span>21 frames · 25 fps · 24 KB · pair-cube-shader.mp4</span></figcaption>
+  </figure>
+  <figure>
+    <video src="videos/pair-resend-hero.mp4" poster="videos/posters/pair-resend-hero.png" controls loop muted playsinline preload="metadata"></video>
+    <figcaption><b>Referencia | copia — hero de resend</b><span>36 frames · 25 fps · 193 KB · pair-resend-hero.mp4</span></figcaption>
+  </figure></div>
+<h2>Las páginas, para abrir en el navegador</h2>
+<ul><li><a href="showcase/hero-stagger.html">hero-stagger.html</a> — Hero: kicker y tres líneas con 100ms de paso</li><li><a href="showcase/headline-wipe.html">headline-wipe.html</a> — Titular partido con clip-path y 180ms de desfase</li><li><a href="showcase/ticker.html">ticker.html</a> — Dos cintas opuestas de 2400ms</li><li><a href="showcase/product-card.html">product-card.html</a> — Ficha 3D con rotateY y translateZ</li><li><a href="showcase/stroke-draw.html">stroke-draw.html</a> — Trazo SVG con stroke-dashoffset</li>
+<li><code>demo/fixtures/parallax-loop.html</code> y <code>demo/fixtures/blend-loop.html</code> — parallax y mezcla de capas</li>
+<li><code>demo/cube-ref/</code> y <code>demo/cube-slow/</code> — el cubo three.js, original y con el reloj del shader a ×1.5</li>
+</ul>
+<h2>Cómo se regeneran</h2>
+<ul><li><code>node demo/make-videos.mjs</code> — rehace los nueve MP4 desde los frames capturados</li>
+<li><code>npm run test:campaign</code> — vuelve a capturar la batería completa</li></ul>
+</body></html>
