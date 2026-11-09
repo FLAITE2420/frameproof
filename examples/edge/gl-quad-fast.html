@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>edge: raw WebGL quad</title>
+<style>html,body{margin:0;background:#08090a}canvas{display:block}</style></head><body>
+<canvas id="c" width="240" height="160"></canvas>
+<script>
+  const SPEED = 2.36; // radians per second — the shader's own clock
+  const gl = document.getElementById("c").getContext("webgl2");
+  const vs = `#version 300 es
+  in vec2 p; uniform float uAngle; out vec2 v;
+  void main(){ float c=cos(uAngle), s=sin(uAngle); v=p; gl_Position=vec4(mat2(c,-s,s,c)*p,0.,1.); }`;
+  const fs = `#version 300 es
+  precision mediump float; in vec2 v; out vec4 o;
+  void main(){ o=vec4(abs(v.x),0.35,abs(v.y),1.); }`;
+  const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s; };
+  const prog = gl.createProgram();
+  gl.attachShader(prog, sh(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog); gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-0.6,-0.6, 0.6,-0.6, 0.6,0.6, -0.6,-0.6, 0.6,0.6, -0.6,0.6]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(prog, "p");
+  gl.enableVertexAttribArray(loc);
+  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  const uAngle = gl.getUniformLocation(prog, "uAngle");
+  const t0 = performance.now();
+  const draw = (now) => {
+    gl.viewport(0, 0, 240, 160);
+    gl.clearColor(0.03, 0.035, 0.04, 1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.uniform1f(uAngle, ((now - t0) / 1000) * SPEED);
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+    requestAnimationFrame(draw);
+  };
+  requestAnimationFrame(draw);
+</script>
+</body></html>

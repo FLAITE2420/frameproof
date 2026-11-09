@@ -1,0 +1,1729 @@
+{
+  "pass": false,
+  "counts": {
+    "channels": 321,
+    "matched": 320,
+    "mismatched": 1,
+    "extraInClone": 0
+  },
+  "mismatched": [
+    {
+      "name": "frameIndex",
+      "status": "value",
+      "detail": "worst 73.33% of range @680ms · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 73.33333333333333
+    }
+  ],
+  "extraInClone": [],
+  "rows": [
+    {
+      "name": "projectionMatrix[0]",
+      "status": "match",
+      "detail": "0.003086419776082039 vs 0.003086419776082039"
+    },
+    {
+      "name": "projectionMatrix[1]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "projectionMatrix[2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "projectionMatrix[3]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "projectionMatrix[4]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "projectionMatrix[5]",
+      "status": "match",
+      "detail": "0.003636363660916686 vs 0.003636363660916686"
+    },
+    {
+      "name": "projectionMatrix[6]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "projectionMatrix[7]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "projectionMatrix[8]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "projectionMatrix[9]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "projectionMatrix[10]",
+      "status": "match",
+      "detail": "-0.000019999999494757503 vs -0.000019999999494757503"
+    },
+    {
+      "name": "projectionMatrix[11]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "projectionMatrix[12]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "projectionMatrix[13]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "projectionMatrix[14]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "projectionMatrix[15]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "modelViewMatrix[0]",
+      "status": "match",
+      "detail": "0.7071067690849304 vs 0.7071067690849304"
+    },
+    {
+      "name": "modelViewMatrix[1]",
+      "status": "match",
+      "detail": "-0.40824830532073975 vs -0.40824830532073975"
+    },
+    {
+      "name": "modelViewMatrix[2]",
+      "status": "match",
+      "detail": "0.5773502588272095 vs 0.5773502588272095"
+    },
+    {
+      "name": "modelViewMatrix[3]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "modelViewMatrix[4]",
+      "status": "match",
+      "detail": "0.4004579484462738 vs 0.4004579484462738"
+    },
+    {
+      "name": "modelViewMatrix[5]",
+      "status": "match",
+      "detail": "0.9041417837142944 vs 0.9041417837142944"
+    },
+    {
+      "name": "modelViewMatrix[6]",
+      "status": "match",
+      "detail": "0.1488659530878067 vs 0.1488659530878067"
+    },
+    {
+      "name": "modelViewMatrix[7]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "modelViewMatrix[8]",
+      "status": "match",
+      "detail": "-0.5827807784080505 vs -0.5827807784080505"
+    },
+    {
+      "name": "modelViewMatrix[9]",
+      "status": "match",
+      "detail": "0.12594038248062134 vs 0.12594038248062134"
+    },
+    {
+      "name": "modelViewMatrix[10]",
+      "status": "match",
+      "detail": "0.8028110861778259 vs 0.8028110861778259"
+    },
+    {
+      "name": "modelViewMatrix[11]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "modelViewMatrix[12]",
+      "status": "match",
+      "detail": "-316.08380126953125 vs -316.08380126953125"
+    },
+    {
+      "name": "modelViewMatrix[13]",
+      "status": "match",
+      "detail": "-15.877767562866211 vs -15.877767562866211"
+    },
+    {
+      "name": "modelViewMatrix[14]",
+      "status": "match",
+      "detail": "-389.0291442871094 vs -389.0291442871094"
+    },
+    {
+      "name": "modelViewMatrix[15]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "viewMatrix[0]",
+      "status": "match",
+      "detail": "0.7071067690849304 vs 0.7071067690849304"
+    },
+    {
+      "name": "viewMatrix[1]",
+      "status": "match",
+      "detail": "-0.40824830532073975 vs -0.40824830532073975"
+    },
+    {
+      "name": "viewMatrix[2]",
+      "status": "match",
+      "detail": "0.5773502588272095 vs 0.5773502588272095"
+    },
+    {
+      "name": "viewMatrix[3]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "viewMatrix[4]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "viewMatrix[5]",
+      "status": "match",
+      "detail": "0.8164966106414795 vs 0.8164966106414795"
+    },
+    {
+      "name": "viewMatrix[6]",
+      "status": "match",
+      "detail": "0.5773502588272095 vs 0.5773502588272095"
+    },
+    {
+      "name": "viewMatrix[7]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "viewMatrix[8]",
+      "status": "match",
+      "detail": "-0.7071067690849304 vs -0.7071067690849304"
+    },
+    {
+      "name": "viewMatrix[9]",
+      "status": "match",
+      "detail": "-0.40824830532073975 vs -0.40824830532073975"
+    },
+    {
+      "name": "viewMatrix[10]",
+      "status": "match",
+      "detail": "0.5773502588272095 vs 0.5773502588272095"
+    },
+    {
+      "name": "viewMatrix[11]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "viewMatrix[12]",
+      "status": "match",
+      "detail": "-5.115907697472721e-13 vs -5.115907697472721e-13"
+    },
+    {
+      "name": "viewMatrix[13]",
+      "status": "match",
+      "detail": "8.526512829121202e-14 vs 8.526512829121202e-14"
+    },
+    {
+      "name": "viewMatrix[14]",
+      "status": "match",
+      "detail": "-997.6612548828125 vs -997.6612548828125"
+    },
+    {
+      "name": "viewMatrix[15]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "cameraPosition[0]",
+      "status": "match",
+      "detail": "575.9999999999999 vs 575.9999999999999"
+    },
+    {
+      "name": "cameraPosition[1]",
+      "status": "match",
+      "detail": "576 vs 576"
+    },
+    {
+      "name": "cameraPosition[2]",
+      "status": "match",
+      "detail": "576.0000000000001 vs 576.0000000000001"
+    },
+    {
+      "name": "spotLightShadows[0].shadowBias",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "spotLightShadows[0].shadowNormalBias",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "spotLightShadows[0].shadowRadius",
+      "status": "match",
+      "detail": "2.022 vs 2.022"
+    },
+    {
+      "name": "spotLightShadows[0].shadowMapSize[0]",
+      "status": "match",
+      "detail": "1024 vs 1024"
+    },
+    {
+      "name": "spotLightShadows[0].shadowMapSize[1]",
+      "status": "match",
+      "detail": "1024 vs 1024"
+    },
+    {
+      "name": "frameIndex",
+      "status": "value",
+      "detail": "worst 73.33% of range @680ms · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 73.33333333333333
+    },
+    {
+      "name": "resolution[0]",
+      "status": "match",
+      "detail": "648 vs 648"
+    },
+    {
+      "name": "resolution[1]",
+      "status": "match",
+      "detail": "550 vs 550"
+    },
+    {
+      "name": "previousModelViewMatrix[0]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousModelViewMatrix[1]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousModelViewMatrix[2]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousModelViewMatrix[3]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousModelViewMatrix[4]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousModelViewMatrix[5]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousModelViewMatrix[6]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousModelViewMatrix[7]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousModelViewMatrix[8]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousModelViewMatrix[9]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousModelViewMatrix[10]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousModelViewMatrix[11]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousModelViewMatrix[12]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousModelViewMatrix[13]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousModelViewMatrix[14]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousModelViewMatrix[15]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "previousProjectionMatrix[0]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousProjectionMatrix[1]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousProjectionMatrix[2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousProjectionMatrix[3]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousProjectionMatrix[4]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousProjectionMatrix[5]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousProjectionMatrix[6]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousProjectionMatrix[7]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousProjectionMatrix[8]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousProjectionMatrix[9]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousProjectionMatrix[10]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "previousProjectionMatrix[11]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousProjectionMatrix[12]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousProjectionMatrix[13]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousProjectionMatrix[14]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "previousProjectionMatrix[15]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "spotLightMatrix[0][0]",
+      "status": "match",
+      "detail": "1.2375434637069702 vs 1.2375434637069702"
+    },
+    {
+      "name": "spotLightMatrix[0][1]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "spotLightMatrix[0][2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "spotLightMatrix[0][3]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "spotLightMatrix[0][4]",
+      "status": "match",
+      "detail": "-0.30132463574409485 vs -0.30132463574409485"
+    },
+    {
+      "name": "spotLightMatrix[0][5]",
+      "status": "match",
+      "detail": "0.6862426400184631 vs 0.6862426400184631"
+    },
+    {
+      "name": "spotLightMatrix[0][6]",
+      "status": "match",
+      "detail": "-0.6327817440032959 vs -0.6327817440032959"
+    },
+    {
+      "name": "spotLightMatrix[0][7]",
+      "status": "match",
+      "detail": "-0.6026492714881897 vs -0.6026492714881897"
+    },
+    {
+      "name": "spotLightMatrix[0][8]",
+      "status": "match",
+      "detail": "-0.3990030884742737 vs -0.3990030884742737"
+    },
+    {
+      "name": "spotLightMatrix[0][9]",
+      "status": "match",
+      "detail": "-1.1448076963424683 vs -1.1448076963424683"
+    },
+    {
+      "name": "spotLightMatrix[0][10]",
+      "status": "match",
+      "detail": "-0.8379064798355103 vs -0.8379064798355103"
+    },
+    {
+      "name": "spotLightMatrix[0][11]",
+      "status": "match",
+      "detail": "-0.7980061769485474 vs -0.7980061769485474"
+    },
+    {
+      "name": "spotLightMatrix[0][12]",
+      "status": "match",
+      "detail": "844.6525268554688 vs 844.6525268554688"
+    },
+    {
+      "name": "spotLightMatrix[0][13]",
+      "status": "match",
+      "detail": "912.8072509765625 vs 912.8072509765625"
+    },
+    {
+      "name": "spotLightMatrix[0][14]",
+      "status": "match",
+      "detail": "1668.770263671875 vs 1668.770263671875"
+    },
+    {
+      "name": "spotLightMatrix[0][15]",
+      "status": "match",
+      "detail": "1689.3050537109375 vs 1689.3050537109375"
+    },
+    {
+      "name": "nodeU7",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU11",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU19",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU28",
+      "status": "match",
+      "detail": "3 vs 3"
+    },
+    {
+      "name": "directionalLights[0].direction[0]",
+      "status": "match",
+      "detail": "0.4599976376686772 vs 0.4599976376686772"
+    },
+    {
+      "name": "directionalLights[0].direction[1]",
+      "status": "match",
+      "detail": "0.7035257987873884 vs 0.7035257987873884"
+    },
+    {
+      "name": "directionalLights[0].direction[2]",
+      "status": "match",
+      "detail": "0.5417135994045225 vs 0.5417135994045225"
+    },
+    {
+      "name": "directionalLights[0].color[0]",
+      "status": "match",
+      "detail": "6.283185307179586 vs 6.283185307179586"
+    },
+    {
+      "name": "directionalLights[0].color[1]",
+      "status": "match",
+      "detail": "6.283185307179586 vs 6.283185307179586"
+    },
+    {
+      "name": "directionalLights[0].color[2]",
+      "status": "match",
+      "detail": "6.283185307179586 vs 6.283185307179586"
+    },
+    {
+      "name": "spotLights[0].position[0]",
+      "status": "match",
+      "detail": "-976.702052058729 vs -976.702052058729"
+    },
+    {
+      "name": "spotLights[0].position[1]",
+      "status": "match",
+      "detail": "231.45846905360716 vs 231.45846905360716"
+    },
+    {
+      "name": "spotLights[0].position[2]",
+      "status": "match",
+      "detail": "362.2154170077595 vs 362.2154170077595"
+    },
+    {
+      "name": "spotLights[0].direction[0]",
+      "status": "match",
+      "detail": "-0.5642755631914467 vs -0.5642755631914467"
+    },
+    {
+      "name": "spotLights[0].direction[1]",
+      "status": "match",
+      "detail": "0.1662764438159565 vs 0.1662764438159565"
+    },
+    {
+      "name": "spotLights[0].direction[2]",
+      "status": "match",
+      "detail": "0.8086688030441728 vs 0.8086688030441728"
+    },
+    {
+      "name": "spotLights[0].color[0]",
+      "status": "match",
+      "detail": "31.41592653589793 vs 31.41592653589793"
+    },
+    {
+      "name": "spotLights[0].color[1]",
+      "status": "match",
+      "detail": "31.41592653589793 vs 31.41592653589793"
+    },
+    {
+      "name": "spotLights[0].color[2]",
+      "status": "match",
+      "detail": "31.41592653589793 vs 31.41592653589793"
+    },
+    {
+      "name": "spotLights[0].distance",
+      "status": "match",
+      "detail": "2100 vs 2100"
+    },
+    {
+      "name": "spotLights[0].decay",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "spotLights[0].coneCos",
+      "status": "match",
+      "detail": "0.9271838545667874 vs 0.9271838545667874"
+    },
+    {
+      "name": "spotLights[0].penumbraCos",
+      "status": "match",
+      "detail": "0.9271838545667874 vs 0.9271838545667874"
+    },
+    {
+      "name": "hemisphereLights[0].direction[0]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "hemisphereLights[0].direction[1]",
+      "status": "match",
+      "detail": "0.816496580927726 vs 0.816496580927726"
+    },
+    {
+      "name": "hemisphereLights[0].direction[2]",
+      "status": "match",
+      "detail": "0.5773502691896258 vs 0.5773502691896258"
+    },
+    {
+      "name": "hemisphereLights[0].skyColor[0]",
+      "status": "match",
+      "detail": "1.9496354409042538 vs 1.9496354409042538"
+    },
+    {
+      "name": "hemisphereLights[0].skyColor[1]",
+      "status": "match",
+      "detail": "1.9496354409042538 vs 1.9496354409042538"
+    },
+    {
+      "name": "hemisphereLights[0].skyColor[2]",
+      "status": "match",
+      "detail": "1.9496354409042538 vs 1.9496354409042538"
+    },
+    {
+      "name": "hemisphereLights[0].groundColor[0]",
+      "status": "match",
+      "detail": "1.2011971910784502 vs 1.2011971910784502"
+    },
+    {
+      "name": "hemisphereLights[0].groundColor[1]",
+      "status": "match",
+      "detail": "1.2011971910784502 vs 1.2011971910784502"
+    },
+    {
+      "name": "hemisphereLights[0].groundColor[2]",
+      "status": "match",
+      "detail": "1.2011971910784502 vs 1.2011971910784502"
+    },
+    {
+      "name": "penumbraSize[0][0]",
+      "status": "match",
+      "detail": "0.5 vs 0.5"
+    },
+    {
+      "name": "penumbraSize[0][1]",
+      "status": "match",
+      "detail": "0.5 vs 0.5"
+    },
+    {
+      "name": "penumbraSize[0][2]",
+      "status": "match",
+      "detail": "0.5 vs 0.5"
+    },
+    {
+      "name": "penumbraSize[0][3]",
+      "status": "match",
+      "detail": "0.5 vs 0.5"
+    },
+    {
+      "name": "penumbraSize[0][4]",
+      "status": "match",
+      "detail": "0.5 vs 0.5"
+    },
+    {
+      "name": "ambientLightColor[0]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "ambientLightColor[1]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "ambientLightColor[2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][0]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][1]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][3]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][4]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][5]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][6]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][7]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][8]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][9]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][10]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][11]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][12]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][13]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][14]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][15]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][16]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][17]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][18]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][19]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][20]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][21]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][22]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][23]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][24]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][25]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "lightProbe[0][26]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU0[0]",
+      "status": "match",
+      "detail": "0.329412 vs 0.329412"
+    },
+    {
+      "name": "nodeU0[1]",
+      "status": "match",
+      "detail": "0.329412 vs 0.329412"
+    },
+    {
+      "name": "nodeU0[2]",
+      "status": "match",
+      "detail": "0.356863 vs 0.356863"
+    },
+    {
+      "name": "nodeU1[0]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "nodeU1[1]",
+      "status": "match",
+      "detail": "2000 vs 2000"
+    },
+    {
+      "name": "nodeU1[2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU2[0]",
+      "status": "match",
+      "detail": "0.329412 vs 0.329412"
+    },
+    {
+      "name": "nodeU2[1]",
+      "status": "match",
+      "detail": "0.329412 vs 0.329412"
+    },
+    {
+      "name": "nodeU2[2]",
+      "status": "match",
+      "detail": "0.356863 vs 0.356863"
+    },
+    {
+      "name": "nodeU3[0]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "nodeU3[1]",
+      "status": "match",
+      "detail": "1024 vs 1024"
+    },
+    {
+      "name": "nodeU3[2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU4",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU5",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU8",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU9[0]",
+      "status": "match",
+      "detail": "0.0392157 vs 0.0392157"
+    },
+    {
+      "name": "nodeU9[1]",
+      "status": "match",
+      "detail": "0.0392157 vs 0.0392157"
+    },
+    {
+      "name": "nodeU9[2]",
+      "status": "match",
+      "detail": "0.0392157 vs 0.0392157"
+    },
+    {
+      "name": "nodeU12[0]",
+      "status": "match",
+      "detail": "0.2 vs 0.2"
+    },
+    {
+      "name": "nodeU12[1]",
+      "status": "match",
+      "detail": "0.2 vs 0.2"
+    },
+    {
+      "name": "nodeU12[2]",
+      "status": "match",
+      "detail": "0.2 vs 0.2"
+    },
+    {
+      "name": "nodeU13",
+      "status": "match",
+      "detail": "5 vs 5"
+    },
+    {
+      "name": "nodeU15",
+      "status": "match",
+      "detail": "0.5 vs 0.5"
+    },
+    {
+      "name": "nodeU16[0]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "nodeU16[1]",
+      "status": "match",
+      "detail": "200 vs 200"
+    },
+    {
+      "name": "nodeU16[2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU17[0]",
+      "status": "match",
+      "detail": "0.847059 vs 0.847059"
+    },
+    {
+      "name": "nodeU17[1]",
+      "status": "match",
+      "detail": "0.847059 vs 0.847059"
+    },
+    {
+      "name": "nodeU17[2]",
+      "status": "match",
+      "detail": "0.847059 vs 0.847059"
+    },
+    {
+      "name": "nodeU18",
+      "status": "match",
+      "detail": "0.1 vs 0.1"
+    },
+    {
+      "name": "nodeU20",
+      "status": "match",
+      "detail": "2 vs 2"
+    },
+    {
+      "name": "nodeU21",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU23[0]",
+      "status": "match",
+      "detail": "worst 0.00% of range · first change +0ms · last change +0ms",
+      "timing": {
+        "firstChange": 0,
+        "lastChange": 0
+      },
+      "worstValuePct": 0
+    },
+    {
+      "name": "nodeU23[1]",
+      "status": "match",
+      "detail": "200 vs 200"
+    },
+    {
+      "name": "nodeU23[2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU24",
+      "status": "match",
+      "detail": "3 vs 3"
+    },
+    {
+      "name": "nodeU25",
+      "status": "match",
+      "detail": "2 vs 2"
+    },
+    {
+      "name": "nodeU27",
+      "status": "match",
+      "detail": "0.2 vs 0.2"
+    },
+    {
+      "name": "nodeU29",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU30",
+      "status": "match",
+      "detail": "5 vs 5"
+    },
+    {
+      "name": "nodeU31",
+      "status": "match",
+      "detail": "7 vs 7"
+    },
+    {
+      "name": "nodeU32[0]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU32[1]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU32[2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU33",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU34",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU35[0]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU35[1]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU35[2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU37",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeUA0[0][0]",
+      "status": "match",
+      "detail": "0.103929 vs 0.103929"
+    },
+    {
+      "name": "nodeUA0[0][1]",
+      "status": "match",
+      "detail": "0.103929 vs 0.103929"
+    },
+    {
+      "name": "nodeUA0[0][2]",
+      "status": "match",
+      "detail": "0.10699 vs 0.10699"
+    },
+    {
+      "name": "nodeUA0[0][3]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeUA0[0][4]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeUA0[0][5]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeUA0[0][6]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeUA0[0][7]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeUA1[0][0]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeUA1[0][1]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "aoMap",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU10",
+      "status": "match",
+      "detail": "0.85 vs 0.85"
+    },
+    {
+      "name": "normalMatrix[0]",
+      "status": "match",
+      "detail": "0.7071067690849304 vs 0.7071067690849304"
+    },
+    {
+      "name": "normalMatrix[1]",
+      "status": "match",
+      "detail": "-0.40824830532073975 vs -0.40824830532073975"
+    },
+    {
+      "name": "normalMatrix[2]",
+      "status": "match",
+      "detail": "0.5773502588272095 vs 0.5773502588272095"
+    },
+    {
+      "name": "normalMatrix[3]",
+      "status": "match",
+      "detail": "0.4004579484462738 vs 0.4004579484462738"
+    },
+    {
+      "name": "normalMatrix[4]",
+      "status": "match",
+      "detail": "0.9041417837142944 vs 0.9041417837142944"
+    },
+    {
+      "name": "normalMatrix[5]",
+      "status": "match",
+      "detail": "0.1488659530878067 vs 0.1488659530878067"
+    },
+    {
+      "name": "normalMatrix[6]",
+      "status": "match",
+      "detail": "-0.5827807784080505 vs -0.5827807784080505"
+    },
+    {
+      "name": "normalMatrix[7]",
+      "status": "match",
+      "detail": "0.12594038248062134 vs 0.12594038248062134"
+    },
+    {
+      "name": "normalMatrix[8]",
+      "status": "match",
+      "detail": "0.8028110861778259 vs 0.8028110861778259"
+    },
+    {
+      "name": "modelMatrix[0]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "modelMatrix[1]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "modelMatrix[2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "modelMatrix[3]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "modelMatrix[4]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "modelMatrix[5]",
+      "status": "match",
+      "detail": "0.8241764903068542 vs 0.8241764903068542"
+    },
+    {
+      "name": "modelMatrix[6]",
+      "status": "match",
+      "detail": "-0.5663330554962158 vs -0.5663330554962158"
+    },
+    {
+      "name": "modelMatrix[7]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "modelMatrix[8]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "modelMatrix[9]",
+      "status": "match",
+      "detail": "0.5663330554962158 vs 0.5663330554962158"
+    },
+    {
+      "name": "modelMatrix[10]",
+      "status": "match",
+      "detail": "0.8241764903068542 vs 0.8241764903068542"
+    },
+    {
+      "name": "modelMatrix[11]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "modelMatrix[12]",
+      "status": "match",
+      "detail": "134.37098693847656 vs 134.37098693847656"
+    },
+    {
+      "name": "modelMatrix[13]",
+      "status": "match",
+      "detail": "338.4297790527344 vs 338.4297790527344"
+    },
+    {
+      "name": "modelMatrix[14]",
+      "status": "match",
+      "detail": "581.3809814453125 vs 581.3809814453125"
+    },
+    {
+      "name": "modelMatrix[15]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "emissive[0]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "emissive[1]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "emissive[2]",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU39",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU40",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU41",
+      "status": "match",
+      "detail": "2 vs 2"
+    },
+    {
+      "name": "nodeU42",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU43",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU44[0]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU44[1]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU44[2]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU45",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU46[0]",
+      "status": "match",
+      "detail": "1.7 vs 1.7"
+    },
+    {
+      "name": "nodeU46[1]",
+      "status": "match",
+      "detail": "9.2 vs 9.2"
+    },
+    {
+      "name": "nodeU47[0]",
+      "status": "match",
+      "detail": "8.3 vs 8.3"
+    },
+    {
+      "name": "nodeU47[1]",
+      "status": "match",
+      "detail": "2.8 vs 2.8"
+    },
+    {
+      "name": "nodeU48[0]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU48[1]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU49[0]",
+      "status": "match",
+      "detail": "0.4 vs 0.4"
+    },
+    {
+      "name": "nodeU49[1]",
+      "status": "match",
+      "detail": "0.4 vs 0.4"
+    },
+    {
+      "name": "nodeU49[2]",
+      "status": "match",
+      "detail": "0.4 vs 0.4"
+    },
+    {
+      "name": "nodeU49[3]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU50[0]",
+      "status": "match",
+      "detail": "0.4 vs 0.4"
+    },
+    {
+      "name": "nodeU50[1]",
+      "status": "match",
+      "detail": "0.4 vs 0.4"
+    },
+    {
+      "name": "nodeU50[2]",
+      "status": "match",
+      "detail": "0.4 vs 0.4"
+    },
+    {
+      "name": "nodeU50[3]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU51[0]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU51[1]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU51[2]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU51[3]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU52[0]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU52[1]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU52[2]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU52[3]",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU53",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU54",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU55",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU56",
+      "status": "match",
+      "detail": "0.3 vs 0.3"
+    },
+    {
+      "name": "nodeU57",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "nodeU58",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU60",
+      "status": "match",
+      "detail": "0.2 vs 0.2"
+    },
+    {
+      "name": "nodeU61",
+      "status": "match",
+      "detail": "3 vs 3"
+    },
+    {
+      "name": "nodeU62",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU63",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "nodeU38",
+      "status": "match",
+      "detail": "3 vs 3"
+    },
+    {
+      "name": "inputBuffer",
+      "status": "match",
+      "detail": "0 vs 0"
+    },
+    {
+      "name": "historyBuffer",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "velocityBuffer",
+      "status": "match",
+      "detail": "2 vs 2"
+    },
+    {
+      "name": "depthBuffer",
+      "status": "match",
+      "detail": "3 vs 3"
+    },
+    {
+      "name": "threshold",
+      "status": "match",
+      "detail": "0.112 vs 0.112"
+    },
+    {
+      "name": "smoothing",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "texelSize[0]",
+      "status": "match",
+      "detail": "0.0030864197530864196 vs 0.0030864197530864196"
+    },
+    {
+      "name": "texelSize[1]",
+      "status": "match",
+      "detail": "0.0036363636363636364 vs 0.0036363636363636364"
+    },
+    {
+      "name": "halfTexelSize[0]",
+      "status": "match",
+      "detail": "0.0015432098765432098 vs 0.0015432098765432098"
+    },
+    {
+      "name": "halfTexelSize[1]",
+      "status": "match",
+      "detail": "0.0018181818181818182 vs 0.0018181818181818182"
+    },
+    {
+      "name": "kernel",
+      "status": "match",
+      "detail": "10 vs 10"
+    },
+    {
+      "name": "scale",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "e0BlendOpacity",
+      "status": "match",
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "e0Intensity",
+      "status": "match",
+      "detail": "0.985 vs 0.985"
+    },
+    {
+      "name": "e0Map",
+      "status": "match",
+      "detail": "1 vs 1"
+    }
+  ]
+}

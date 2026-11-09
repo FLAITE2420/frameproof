@@ -5,6 +5,7 @@ import { compareMain } from "./compare.mjs";
 import { easingMain } from "./easing.mjs";
 import { noisefloorMain } from "./noisefloor.mjs";
 import { sheetMain } from "./sheet.mjs";
+import { glMain } from "./glcmd.mjs";
 
 const USAGE = `frameproof — capture, measure and prove web animation
 
@@ -13,6 +14,7 @@ const USAGE = `frameproof — capture, measure and prove web animation
   frameproof easing      name the curve of a tracked property
   frameproof noisefloor  how repeatable is a capture of this page?
   frameproof sheet       labelled contact sheets (filmstrip / compare)
+  frameproof gl          WebGL trace: summary of a capture, or compare two
 
   frameproof <command> --help
 `;
@@ -24,6 +26,7 @@ const table = {
   easing: easingMain,
   noisefloor: noisefloorMain,
   sheet: sheetMain,
+  gl: glMain,
 };
 
 if (!cmd || cmd === "--help" || cmd === "-h" || cmd === "help") {

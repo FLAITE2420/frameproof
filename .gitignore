@@ -19,3 +19,18 @@ demo/ref-inspect/
 
 # default output of a bare `noisefloor --url` run
 noisefloor/
+
+# candado 2026-11-09: secretos
+.env
+.env.*
+demo/cube-ref/
+demo/cube-slow/
+demo/glit-*/frames/
+demo/gl-cube/
+demo/gl-fluid/
+demo/gl-pixel/
+demo/probe2-*/
+demo/RESULTADO.html
+demo/glit-ref/
+demo/glit-slow/
+demo/linear-grid.json

@@ -79,7 +79,7 @@ node src/cli.mjs sheet compare --ref ref --clone copy-1 --diff compare-1/diff --
 
 ## Measured results in this repo
 
-`npm test` runs 29 hand-written checks (10 end to end, 19 on the edges) plus 766 generated fuzz checks. Current run on Node 22.23.1, Chromium 1248, 1440x900 @ 25 fps:
+`npm test` runs 31 hand-written checks (10 end to end, 21 on the edges) plus 766 generated fuzz checks. Current run on Node 22.23.1, Chromium 1248, 1440x900 @ 25 fps:
 
 | check | result |
 |---|---|
@@ -152,6 +152,40 @@ It found six things the hand-written tests did not:
 That last row is the honest part: on a live page the clock is exact, the layout is not. Without the floor you would call a 3 px layout shift a difference in your copy.
 
 The `fill: none` entrance is also the reason step 2 of the capture exists. On a slow load (this page takes ~60 s in software GL) that animation finishes and is dropped from `document.getAnimations()` before any tool can look at it. frameproof injects `animation-play-state: paused` before the page's own CSS runs, so the animation is still there at frame 0.
+
+## GPU: shaders, uniforms, draw cadence
+
+`capture --gl` hooks the WebGL prototype inside the page before any script of
+the page runs, so it records what the GPU was actually told, not what the source
+files say: every shader source as compiled, every program's active uniform list,
+every uniform value per frame, and the draw count per frame. Same virtual clock,
+so frame k is the same instant for the DOM and for the GPU.
+
+```
+frameproof capture --url <page> --out <dir> --gl
+frameproof gl summary <dir>
+frameproof gl compare --ref <dir> --clone <dir>
+```
+
+Measured on `resend.com`'s three.js hero cube (three r178, copied by hand into
+`demo/cube-ref`):
+
+| what | number |
+|---|---|
+| context | webgl2 648x550, 14 programs, 28 shader sources |
+| draw calls | 195.6 per frame |
+| channels | 321 (20 animated: `frameIndex`, the 16 previous-model-view matrix components, time) |
+| capture vs itself | **321/321 channels match, PASS** |
+| shader clock ×1.5 in the copy | **FAIL on `frameIndex` — 73.33 % of range at 680 ms, timing identical** |
+
+The second row of that last pair is the point: an altered uniform is named, with
+the millisecond where the drift is worst, and the timing of the change is still
+reported as identical — so you know the copy is choreographed the same and
+computes something else.
+
+`gl compare` matches channels by name, so it does not care that the two pages
+allocate different JS objects; it does care about a uniform that appears only in
+the clone, and says so.
 
 ## Limits
 

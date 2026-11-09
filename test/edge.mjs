@@ -1,7 +1,7 @@
 // Edge battery: the cases that break a frame recorder. Every check states what
 // must happen, and fails loudly with the number it got instead.
 import { execFileSync } from "node:child_process";
-import { existsSync, rmSync } from "node:fs";
+import { existsSync, rmSync, readdirSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { readJson } from "../src/lib.mjs";
 import { seriesOf, fit } from "../src/easing.mjs";
@@ -188,8 +188,31 @@ rmSync(WORK, { recursive: true, force: true });
   capture(edge("late-animation.html"), "late", ["--duration", "900", "--fps", "25", "--track", "#box"]);
   const s = json("late/track.json").samples;
   const at = (ms) => s.find((x) => x.t === ms)["#box"].tx;
-  const mid = at(400), last = at(800);
-  check("a late transition keeps its own clock", mid > 20 && mid < 280 && Math.abs(last - 300) < 1, `tx(400ms)=${mid.toFixed(1)}px, tx(800ms)=${last.toFixed(1)}px of 300`);
+  const before = at(240), mid = at(400), after = at(560), last = at(800);
+  const moved = mid - before > 100 && after >= mid && mid < 299.5;
+  check("a late transition keeps its own clock", before === 0 && moved && Math.abs(last - 300) < 1,
+    `tx: 240ms=${before.toFixed(1)} → 400ms=${mid.toFixed(1)} → 560ms=${after.toFixed(1)} → 800ms=${last.toFixed(1)} of 300`);
+}
+
+// 19. --gl traces a shader: programs, sources, uniforms per frame
+{
+  capture(edge("gl-quad.html"), "gq", ["--duration", "400", "--fps", "25", "--gl"]);
+  const gl = json("gq/gl/gl.json");
+  const shaders = readdirSync(join(WORK, "gq", "gl", "shaders"));
+  const u = gl.channels.uAngle;
+  check("--gl traces shaders and uniforms", gl.programs.length === 1 && shaders.length === 2 && u?.kind === "animated",
+    `programs=${gl.programs.length} shaders=${shaders.length} uAngle=${u ? u.min.toFixed(3) + "→" + u.max.toFixed(3) : "missing"}`);
+}
+
+// 20. gl compare holds the clone to the reference's uniforms, and names the one that drifts
+{
+  capture(edge("gl-quad-fast.html"), "gq-fast", ["--duration", "400", "--fps", "25", "--gl"]);
+  const same = run(["gl", "compare", "--ref", join(WORK, "gq"), "--clone", join(WORK, "gq"), "--out", join(WORK, "gqc-same")], { expectStatus: 0 });
+  const diff = run(["gl", "compare", "--ref", join(WORK, "gq"), "--clone", join(WORK, "gq-fast"), "--out", join(WORK, "gqc-diff")], { expectStatus: 1 });
+  const rep = json("gqc-diff/gl-compare.json");
+  const named = rep.mismatched.map((r) => r.name).join(",");
+  check("gl compare passes the same shader and names the altered one", same.status === 0 && diff.status === 1 && named === "uAngle",
+    `same exit ${same.status} · altered exit ${diff.status} on ${named || "nothing"} (${rep.mismatched[0]?.detail ?? ""})`);
 }
 
 const failed = results.filter((r) => !r.ok);
